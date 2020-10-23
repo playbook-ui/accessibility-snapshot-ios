@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SamplePlaybook' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SamplePlaybook
+	pod 'PlaybookAccessibility', :path => '../PlaybookAccessibility.podspec'
+	pod 'Playbook', :path => '/Users/z-jiayi/playbook-ios/Playbook.podspec'
+
+
+end
+
+target 'SampleAccessibilitySnapshot' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SampleAccessibilitySnapshot
+	pod 'PlaybookAccessibility', :path => '../PlaybookAccessibility.podspec'
+end
+

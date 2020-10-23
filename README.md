@@ -38,15 +38,15 @@ final class AccessibilitySnapshotTests: XCTestCase {
 
 <img src="https://raw.githubusercontent.com/jiayi-zhou/playbook-accessibility-ios/main/assets/accessibility-snapshot.png" alt="accessibility snapshot">
 
-
 ---
+
 ## Requirements
 
 - Swift 5.1+
 - Xcode 11.0+
 - iOS
   - `PlaybookAccessibility`: 12.0+
-
+  
 ---
 
 ## Installation
@@ -66,6 +66,7 @@ target 'YourPlaybook' do
   end
 end
 ```
+
 ---
 
 ## License
