@@ -1,5 +1,3 @@
-import UIKit
-import Playbook
 import AccessibilitySnapshot
 
 extension SnapshotSupport {
@@ -17,15 +15,15 @@ extension SnapshotSupport {
     /// - Note: Passing the key window adds the scenario content to the view
     ///         hierarchy and actually renders it, so producing a more accurate
     ///         snapshot image.
-    static func accessibilityData(
+    public static func accessibilityData(
         for scenario: Scenario,
         on device: SnapshotDevice,
-        format: SnapshotSupport.ImageFormat,
+        format: ImageFormat,
         scale: CGFloat = UIScreen.main.scale,
         keyWindow: UIWindow? = nil,
         handler: @escaping (Data) -> Void
     ) {
-        SnapshotSupport.view(for: scenario, on: device, keyWindow: keyWindow) { scenarioView in
+        view(for: scenario, on: device, keyWindow: keyWindow) { scenarioView in
             let accessibilityView = AccessibilitySnapshotView(
                 containedView: scenarioView,
                 viewRenderingMode: .renderLayerInContext,
@@ -35,7 +33,7 @@ extension SnapshotSupport {
             accessibilityView.parseAccessibility(useMonochromeSnapshot: false)
             accessibilityView.sizeToFit()
 
-            SnapshotSupport.data(
+            data(
                 for: accessibilityView,
                 on: device,
                 format: format,
