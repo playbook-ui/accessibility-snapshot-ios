@@ -1,4 +1,5 @@
 import AccessibilitySnapshot
+import UIKit
 
 extension SnapshotSupport {
 
