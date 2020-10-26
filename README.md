@@ -46,7 +46,7 @@ final class AccessibilitySnapshotTests: XCTestCase {
 - Xcode 11.0+
 - iOS
   - `PlaybookAccessibility`: 12.0+
-  
+
 ---
 
 ## Installation
