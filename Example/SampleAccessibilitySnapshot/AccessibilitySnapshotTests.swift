@@ -1,4 +1,5 @@
 import PlaybookAccessibility
+import Playbook
 import XCTest
 
 final class AccessibilitySnapshotTests: XCTestCase {

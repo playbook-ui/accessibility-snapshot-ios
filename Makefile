@@ -8,7 +8,6 @@ all: proj mod format
 
 .PHONY: proj
 proj:
-	$(SWIFT_TOOL) xcodegen --use-cache
 	$(SWIFT_TOOL) xcodegen --spec Example/project.yml --project Example
 
 .PHONY: mod

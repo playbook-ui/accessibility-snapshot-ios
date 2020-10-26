@@ -1,4 +1,5 @@
 import XCTest
+import Playbook
 
 /// The testing tool which generates snapshot images from scenarios managed by `Playbook`.
 public struct PlaybookAccessibilitySnapshot: TestTool {

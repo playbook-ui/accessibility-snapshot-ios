@@ -20,12 +20,12 @@ extension SnapshotSupport {
     static func accessibilityData(
         for scenario: Scenario,
         on device: SnapshotDevice,
-        format: ImageFormat,
+        format: SnapshotSupport.ImageFormat,
         scale: CGFloat = UIScreen.main.scale,
         keyWindow: UIWindow? = nil,
         handler: @escaping (Data) -> Void
     ) {
-        SnapshotSupport.view(for: scenario, on: device, scale: scale, keyWindow: keyWindow) { scenarioView in
+        SnapshotSupport.view(for: scenario, on: device, keyWindow: keyWindow) { scenarioView in
             let accessibilityView = AccessibilitySnapshotView(
                 containedView: scenarioView,
                 viewRenderingMode: .renderLayerInContext,

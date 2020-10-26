@@ -1,22 +1,14 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
-target 'SamplePlaybook' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for SamplePlaybook
-	pod 'PlaybookAccessibility', :path => '../PlaybookAccessibility.podspec'
-	pod 'Playbook', :path => '/Users/z-jiayi/playbook-ios/Playbook.podspec'
-
-
-end
+use_frameworks!
+use_modular_headers!
+platform :ios, '13.0'
+source 'https://cdn.cocoapods.org/'
 
 target 'SampleAccessibilitySnapshot' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+	inherit! :search_paths
 
-  # Pods for SampleAccessibilitySnapshot
+	pod 'AccessibilitySnapshot/Core'
+	pod 'Playbook', :path => '/Users/z-jiayi/playbook-ios/Playbook.podspec'
 	pod 'PlaybookAccessibility', :path => '../PlaybookAccessibility.podspec'
 end
 
+install! 'cocoapods', :disable_input_output_paths => true
