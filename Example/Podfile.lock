@@ -8,7 +8,8 @@ PODS:
     - Playbook (~> 0.1.2)
 
 DEPENDENCIES:
-  - Playbook (from `/Users/z-jiayi/playbook-ios/Playbook.podspec`)
+  - AccessibilitySnapshot/Core
+  - Playbook (from `https://github.com/jiayi-zhou/playbook-ios`, branch `accessibility-support`)
   - PlaybookAccessibility (from `../PlaybookAccessibility.podspec`)
 
 SPEC REPOS:
@@ -18,9 +19,15 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Playbook:
-    :path: "/Users/z-jiayi/playbook-ios/Playbook.podspec"
+    :branch: accessibility-support
+    :git: https://github.com/jiayi-zhou/playbook-ios
   PlaybookAccessibility:
     :path: "../PlaybookAccessibility.podspec"
+
+CHECKOUT OPTIONS:
+  Playbook:
+    :commit: 1e134daa4f3dad14fc6ca83698886ee68573dd46
+    :git: https://github.com/jiayi-zhou/playbook-ios
 
 SPEC CHECKSUMS:
   AccessibilitySnapshot: fc706b52b64780cc00dbadda8b445320ff3ed17c
@@ -28,6 +35,6 @@ SPEC CHECKSUMS:
   Playbook: 0df9ed27be6ea997860db078046b70678cf21ea9
   PlaybookAccessibility: e6da52d4e97e42a88d9530f5988f8f4423da4f7d
 
-PODFILE CHECKSUM: 2f999245123235a594d910dbd6510c312f12951b
+PODFILE CHECKSUM: 37bff6603f4ca58062bc242a3a5b992bf34b84e0
 
 COCOAPODS: 1.9.3

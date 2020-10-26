@@ -7,7 +7,7 @@ target 'SampleAccessibilitySnapshot' do
 	inherit! :search_paths
 
 	pod 'AccessibilitySnapshot/Core'
-	pod 'Playbook', :path => '/Users/z-jiayi/playbook-ios/Playbook.podspec'
+	pod 'Playbook', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
 	pod 'PlaybookAccessibility', :path => '../PlaybookAccessibility.podspec'
 end
 
