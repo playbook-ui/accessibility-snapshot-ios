@@ -4,8 +4,8 @@ import XCTest
 
 final class AccessibilitySnapshotTests: XCTestCase {
     func testTakeAccessibilitySnapshot() throws {
-        guard let directory = ProcessInfo.processInfo.environment["SNAPSHOT_DIR_ACC"] else {
-            fatalError("Set directory to the build environment variables with key `SNAPSHOT_DIR`.")
+        guard let directory = ProcessInfo.processInfo.environment["ACC_SNAPSHOT_DIR"] else {
+            fatalError("Set directory to the build environment variables with key `ACC_SNAPSHOT_DIR`.")
         }
 
         try Playbook.default.run(

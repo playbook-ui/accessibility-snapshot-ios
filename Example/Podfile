@@ -3,6 +3,13 @@ use_modular_headers!
 platform :ios, '13.0'
 source 'https://cdn.cocoapods.org/'
 
+target 'SamplePlaybook' do
+	inherit! :search_paths
+
+	pod 'Playbook', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
+	pod 'PlaybookUI', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
+end
+
 target 'SampleAccessibilitySnapshot' do
 	inherit! :search_paths
 
