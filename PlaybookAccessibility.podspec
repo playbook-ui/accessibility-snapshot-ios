@@ -13,6 +13,7 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target = '12.0'
     spec.ios.source_files = 'Sources/**/*.swift'
     spec.ios.frameworks = 'XCTest'
+    spec.dependency 'PlaybookSnapshot', "~> 0.1.2"
     spec.dependency 'Playbook', "~> 0.1.2"
     spec.dependency 'AccessibilitySnapshot/Core', "~> 0.3.2"
 

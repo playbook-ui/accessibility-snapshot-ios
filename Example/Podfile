@@ -15,6 +15,7 @@ target 'SampleAccessibilitySnapshot' do
 
 	pod 'AccessibilitySnapshot/Core'
 	pod 'Playbook', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
+	pod 'PlaybookSnapshot', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
 	pod 'PlaybookAccessibility', :path => '../PlaybookAccessibility.podspec'
 end
 
