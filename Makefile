@@ -1,6 +1,6 @@
 SWIFT_TOOL := Tools/swift-run.sh
-GITHUB_RAW_CONTENT_PATH := https://raw.githubusercontent.com/playbook-ui/playbook-ios/master/
-GITHUB_TREE_PATH := https://github.com/playbook-ui/playbook-ios/tree/master/
+GITHUB_RAW_CONTENT_PATH := https://raw.githubusercontent.com/playbook-ui/playbook-accessibility-ios/main/
+GITHUB_TREE_PATH := https://github.com/playbook-ui/playbook-accessibility-ios/main/
 LIBS := "PlaybookAccessibility"
 
 .PHONY: all
@@ -46,33 +46,4 @@ npm:
 
 .PHONY: docs
 docs:
-	$(SWIFT_TOOL) swift-doc generate Sources -n Playbook -f html -o docs
-
-.PHONY: fix-readme-links
-fix-readme-links:
-	sed -i '' -E '/.?http/!s#(<img src=")([^"]+)#\1$(GITHUB_RAW_CONTENT_PATH)\2#g' README.md
-	sed -i '' -E '/.?http/!s#(<img .+src=")([^"]+)#\1$(GITHUB_RAW_CONTENT_PATH)\2#g' README.md
-	sed -i '' -E '/.?http/!s#(<a href=")([^"]+)#\1$(GITHUB_TREE_PATH)\2#g' README.md
-	sed -i '' -E '/.?http/!s#(<a .+href=")([^"]+)#\1$(GITHUB_TREE_PATH)\2#g' README.md
-	sed -i '' -E '/.?http/!s#(\!\[.+\])\((.+)\)#\1($(GITHUB_RAW_CONTENT_PATH)\2)#g' README.md
-	sed -i '' -E '/.?http/!s#(\[.+\])\((.+)\)#\1($(GITHUB_TREE_PATH)\2)#g' README.md
-
-.PHONY: xcframework
-xcframework:
-	rm -rf ./archive
-	for scheme in $(LIBS); do \
-	  for sdk in "iphoneos" "iphonesimulator"; do \
-	  xcodebuild archive \
-	    -scheme $$scheme \
-	    -configuration Release \
-	    -sdk $$sdk \
-	    -destination="iOS" \
-	    -archivePath "archive/$$sdk.xcarchive"; \
-	  done; \
-	  find archive -name '*.swiftinterface' -exec sed -i '' -e 's/PlaybookAccessibility\.//g' {} \;; \
-	  rm -rf ./$$scheme.xcframework; \
-	  xcodebuild -create-xcframework \
-	    -framework archive/iphoneos.xcarchive/Products/Library/Frameworks/$$scheme.framework \
-	    -framework archive/iphonesimulator.xcarchive/Products/Library/Frameworks/$$scheme.framework \
-	    -output $$scheme.xcframework; \
-	done
+	$(SWIFT_TOOL) swift-doc generate Sources -n PlaybookAccessibility -f html -o docs
