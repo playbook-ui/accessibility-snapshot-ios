@@ -3,7 +3,7 @@ import PlaybookSnapshot
 import XCTest
 
 /// The testing tool which generates snapshot images from scenarios managed by `Playbook`.
-public struct AccessibilitySnapshot: TestTool {
+public struct AccessibilityInfoSnapshot: TestTool {
     private let snapshot: Snapshot
 
     /// Creates a new snapshot tool for export all image files with accessibility tags into specified directory.
