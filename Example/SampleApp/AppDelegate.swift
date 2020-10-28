@@ -5,8 +5,8 @@ Abstract:
 iOS App Delegate for accessibility examples
 */
 
-import UIKit
 import SwiftUI
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,4 +21,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

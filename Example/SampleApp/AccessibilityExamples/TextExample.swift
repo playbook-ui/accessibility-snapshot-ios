@@ -16,7 +16,7 @@ struct TextExample: View {
             LargeSpacer()
 
             Text("Relabeled Text")
-                .accessibility(label: Text("Accessibility Label"))
+                .accessibilityLabel(Text("Accessibility Label"))
 
             LargeSpacer()
 
@@ -34,12 +34,12 @@ struct TextExample: View {
 
             Text("Simple Multiple Line Text\nThis is on another line")
                 .lineLimit(nil)
-            
+
             LargeSpacer()
 
             Text("Text with value and label")
-                .accessibility(value: Text("Text Value"))
-                .accessibility(label: Text("Text Label"))
+                .accessibilityValue(Text("Text Value"))
+                .accessibilityLabel(Text("Text Label"))
         }
     }
 }

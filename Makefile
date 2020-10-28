@@ -21,7 +21,7 @@ mod:
 .PHONY: format
 format:
 	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -i -r -m format \
-	  Sources Example/SampleAccessibilitySnapshot
+	  Sources Example
 
 .PHONY: lint
 lint:

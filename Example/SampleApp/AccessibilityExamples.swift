@@ -37,7 +37,7 @@ let examples = [
     AccessibilityExample(name: "Text", view: TextExample()),
     AccessibilityExample(name: "Containers", view: ContainerExample()),
     AccessibilityExample(name: "Actions", view: ActionExample()),
-    AccessibilityExample(name: "ViewRepresentable", view: RepresentableExample())
+    AccessibilityExample(name: "ViewRepresentable", view: RepresentableExample()),
 ]
 
 // Visual representaiton of an element
@@ -51,9 +51,13 @@ struct AccessibilityElementView: View {
             .frame(width: 128, height: 48)
             .overlay(text, alignment: .center)
             .foregroundColor(Color.white)
-            .overlay(RoundedRectangle(cornerRadius: defaultCornerRadius)
-            .strokeBorder(Color.white, lineWidth: 2))
-            .overlay(RoundedRectangle(cornerRadius: defaultCornerRadius)
-            .strokeBorder(Color.gray, lineWidth: 1))
+            .overlay(
+                RoundedRectangle(cornerRadius: defaultCornerRadius)
+                    .strokeBorder(Color.white, lineWidth: 2)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: defaultCornerRadius)
+                    .strokeBorder(Color.gray, lineWidth: 1)
+            )
     }
 }

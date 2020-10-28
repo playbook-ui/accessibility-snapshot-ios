@@ -20,7 +20,7 @@ struct ExampleView: View {
         VStack {
             example.view
                 .padding(.horizontal)
-            
+
             Spacer()
         }
     }

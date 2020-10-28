@@ -47,7 +47,9 @@ struct RepresentableViewController: UIViewControllerRepresentable {
         return RepresentableUIViewController()
     }
 
-    func updateUIViewController(_ nsViewController: RepresentableUIViewController,
-                                context: UIViewControllerRepresentableContext<RepresentableViewController>) {
+    func updateUIViewController(
+        _ nsViewController: RepresentableUIViewController,
+        context: UIViewControllerRepresentableContext<RepresentableViewController>
+    ) {
     }
 }

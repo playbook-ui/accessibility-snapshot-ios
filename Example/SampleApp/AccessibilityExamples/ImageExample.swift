@@ -47,7 +47,7 @@ struct ImageExample: View {
             HStack {
                 // This image uses an explicit accessibility label via the API.
                 ExampleImageView(Image("dot_red"))
-                    .accessibility(label: Text("Red Dot Image"))
+                    .accessibilityLabel(Text("Red Dot Image"))
 
                 // This image is created with an explicit accessibility label.
                 ExampleImageView(Image("dot_green", label: Text("Green Dot")))
@@ -61,7 +61,7 @@ struct ImageExample: View {
             LargeSpacer()
 
             Text("Decorative Image")
-            
+
             // This image is explicitly marked decorative, so it does not
             // create an accessibility element.
             ExampleImageView(Image(decorative: "dot_green"))

@@ -54,9 +54,9 @@ struct ActionExample: View {
             Text("Element with default action")
 
             AccessibilityElementView(color: defaultActionColor, text: Text("Default"))
-                .accessibility(label: Text("Element with default action"))
-                .accessibility(addTraits: .isButton)
-                .accessibilityAction() {
+                .accessibilityLabel(Text("Element with default action"))
+                .accessibilityAddTraits(.isButton)
+                .accessibilityAction {
                     print("Default action fired!")
                     self.defaultActionFired = true
                 }
@@ -66,17 +66,17 @@ struct ActionExample: View {
             Text("Element with custom actions")
 
             AccessibilityElementView(color: customActionColor, text: Text("Custom"))
-                .accessibility(label: Text("Element with custom actions"))
+                .accessibilityLabel(Text("Element with custom actions"))
                 .accessibilityAction(named: Text("Custom Action 1"), customAction1)
                 .accessibilityAction(named: Text("Custom Action 2"), customAction2)
 
             LargeSpacer()
 
             Text("Custom adjustment action element")
-            
+
             AccessibilityElementView(color: .green, text: Text("Adjustable: \(incrementIndex)"))
-                .accessibility(label: Text("Custom increment element"))
-                .accessibility(value: Text(verbatim: "\(incrementIndex)"))
+                .accessibilityLabel(Text("Custom increment element"))
+                .accessibilityValue(Text(verbatim: "\(incrementIndex)"))
                 .accessibilityAdjustableAction(adjustAction)
         }
     }

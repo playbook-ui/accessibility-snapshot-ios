@@ -27,7 +27,7 @@ struct ContainerExample: View {
             // Explicitly make a new accessibility element
             // which will contain the children.
             .accessibilityElement(children: .contain)
-            .accessibility(label: Text("Grouping Container"))
+            .accessibilityLabel(Text("Grouping Container"))
 
             LargeSpacer()
 
@@ -47,17 +47,17 @@ struct ContainerExample: View {
             .border(Color.blue, width: 0.5)
             // Hide all the accessibility elements that come from controls
             // inside this stack
-            .accessibility(hidden: true)
+            .accessibilityHidden(true)
             // Create a new accessibility element to contain them
             .accessibilityElement(children: .contain)
-            .accessibility(label: Text("Hiding Container"))
+            .accessibilityLabel(Text("Hiding Container"))
 
             LargeSpacer()
 
             // Two text elements in a vertical stack, with different hints.
             VStack(alignment: .leading) {
-                Text("Combining").accessibility(hint: Text("First Hint"))
-                Text("Container").accessibility(hint: Text("Second Hint"))
+                Text("Combining").accessibilityHint(Text("First Hint"))
+                Text("Container").accessibilityHint(Text("Second Hint"))
             }
             .padding()
             .background(Color.white)
