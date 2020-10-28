@@ -42,8 +42,8 @@ final class AccessibilitySnapshotTests: XCTestCase {
 
 ## Requirements
 
-- Swift 5.1+
-- Xcode 11.0+
+- Swift 5.3+
+- Xcode 12.1+ (12.2 beta 3+ required for snapshots with SwiftUI ScrollView)
 - iOS
   - `PlaybookAccessibility`: 12.0+
 

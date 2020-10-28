@@ -1,20 +1,17 @@
 use_frameworks!
-use_modular_headers!
-platform :ios, '13.0'
+platform :ios, '14.0'
 source 'https://cdn.cocoapods.org/'
 
-target 'SamplePlaybook' do
+target 'SampleApp' do
 	inherit! :search_paths
 
 	pod 'Playbook', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
-	pod 'PlaybookUI', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
 end
 
 target 'SampleAccessibilitySnapshot' do
 	inherit! :search_paths
 
-	pod 'AccessibilitySnapshot/Core'
-	pod 'Playbook', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
+	pod 'AccessibilitySnapshot/Core', '~> 0.3.2'
 	pod 'PlaybookSnapshot', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
 	pod 'PlaybookAccessibility', :path => '../PlaybookAccessibility.podspec'
 end

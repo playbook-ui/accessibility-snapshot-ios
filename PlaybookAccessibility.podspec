@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
     spec.name = 'PlaybookAccessibility'
     spec.version  = `cat .version`
-    spec.author = { 'jiayi-zhou' => 'jiayi.zhou98@gmail.com' }
+    spec.authors = { 'jiayi-zhou' => 'jiayi.zhou98@gmail.com', 'ra1028' => 'r.fe51028.r@gmail.com' }
     spec.homepage = 'https://github.com/playbook-ui/playbook-ios'
     spec.documentation_url = 'https://playbook-ui.github.io/playbook-ios'
     spec.summary = 'A library for generating snapshot images of components managed by Playbook with accessibility labels.'
@@ -9,12 +9,11 @@ Pod::Spec.new do |spec|
     spec.license = { :type => 'Apache 2.0', :file => 'LICENSE' }
 
     spec.requires_arc = true
-    spec.swift_versions = '5.1'
+    spec.swift_versions = '5.3'
     spec.ios.deployment_target = '12.0'
     spec.ios.source_files = 'Sources/**/*.swift'
     spec.ios.frameworks = 'XCTest'
     spec.dependency 'PlaybookSnapshot', "~> 0.1.2"
-    spec.dependency 'Playbook', "~> 0.1.2"
     spec.dependency 'AccessibilitySnapshot/Core', "~> 0.3.2"
 
     spec.pod_target_xcconfig = {

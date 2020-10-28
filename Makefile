@@ -4,11 +4,15 @@ GITHUB_TREE_PATH := https://github.com/playbook-ui/playbook-accessibility-ios/ma
 LIBS := "PlaybookAccessibility"
 
 .PHONY: all
-all: proj mod format
+all: proj pod-install mod format
 
 .PHONY: proj
 proj:
 	$(SWIFT_TOOL) xcodegen --spec Example/project.yml --project Example
+
+.PHONY: pod-install
+pod-install:
+	bundle exec pod install --project-directory=Example
 
 .PHONY: mod
 mod:
@@ -17,7 +21,7 @@ mod:
 .PHONY: format
 format:
 	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -i -r -m format \
-	  Sources Example/SamplePlaybook Example/SampleSnapshot
+	  Sources Example/SampleAccessibilitySnapshot
 
 .PHONY: lint
 lint:
@@ -25,15 +29,11 @@ lint:
 
 .PHONY: pod-lib-lint
 pod-lib-lint:
-	for lib in $(LIBS); do \
-	  bundle exec pod lib lint $$lib.podspec; \
-	done
+	bundle exec pod lib lint PlaybookAccessibility.podspec;
 
 .PHONY: pod-release
 pod-release:
-	for lib in $(LIBS); do \
-	  bundle exec pod trunk push $$lib.podspec; \
-	done
+	bundle exec pod trunk push PlaybookAccessibility.podspec;
 
 .PHONY: gem
 gem:

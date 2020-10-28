@@ -1,25 +1,22 @@
-name: PlaybookExample
+name: PlaybookAccessibilitySnapshotExample
 options:
-  bundleIdPrefix: app.playbook-ui-accessibility.Example
+  bundleIdPrefix: app.playbook-ui.accessibility.Example
   deploymentTarget:
-    iOS: 13.4
-  postGenCommand: pod install
+    iOS: 14.0
   
 targets:
-  SamplePlaybook:
+  SampleApp:
     Example:
     type: application
     platform: iOS
-    sources: SamplePlaybook
-    dependencies:
-      - target: SampleComponent
+    sources: SampleApp
     scheme:
       testTargets:
         - SampleAccessibilitySnapshot
       commandLineArguments:
         -AppleLanguages (en): true
       environmentVariables:
-        ACC_SNAPSHOT_DIR: $(SOURCE_ROOT)/AccessibilitySnapshots
+        SNAPSHOT_DIR: $(SOURCE_ROOT)/Snapshots
     attributes:
       ProvisioningStyle: Manual
       
@@ -29,22 +26,6 @@ targets:
     sources:
       - SampleAccessibilitySnapshot
     dependencies:
-      - target: SamplePlaybook
+      - target: SampleApp
     attributes:
       ProvisioningStyle: Manual
-
-  SampleApp:
-    type: application
-    platform: iOS
-    sources:
-      - SampleApp
-    dependencies:
-      - target: SampleComponent
-    attributes:
-      ProvisioningStyle: Manual
-
-  SampleComponent:
-    type: framework
-    platform: iOS
-    sources:
-      - SampleComponent

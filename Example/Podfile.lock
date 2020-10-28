@@ -3,21 +3,17 @@ PODS:
     - fishhook (~> 0.2)
   - fishhook (0.2)
   - Playbook (0.1.2)
-  - PlaybookAccessibility (0.1.2):
+  - PlaybookAccessibility (0.1.0):
     - AccessibilitySnapshot/Core (~> 0.3.2)
-    - Playbook (~> 0.1.2)
     - PlaybookSnapshot (~> 0.1.2)
   - PlaybookSnapshot (0.1.2):
     - Playbook (~> 0)
-  - PlaybookUI (0.1.2):
-    - Playbook (~> 0)
 
 DEPENDENCIES:
-  - AccessibilitySnapshot/Core
+  - AccessibilitySnapshot/Core (~> 0.3.2)
   - Playbook (from `https://github.com/jiayi-zhou/playbook-ios`, branch `accessibility-support`)
   - PlaybookAccessibility (from `../PlaybookAccessibility.podspec`)
   - PlaybookSnapshot (from `https://github.com/jiayi-zhou/playbook-ios`, branch `accessibility-support`)
-  - PlaybookUI (from `https://github.com/jiayi-zhou/playbook-ios`, branch `accessibility-support`)
 
 SPEC REPOS:
   trunk:
@@ -33,29 +29,22 @@ EXTERNAL SOURCES:
   PlaybookSnapshot:
     :branch: accessibility-support
     :git: https://github.com/jiayi-zhou/playbook-ios
-  PlaybookUI:
-    :branch: accessibility-support
-    :git: https://github.com/jiayi-zhou/playbook-ios
 
 CHECKOUT OPTIONS:
   Playbook:
-    :commit: 280b4ff543f9824bfb5eacd1a9e072c1d9f19f20
+    :commit: 010721033ad7d473f8587ef914b45ba8bf32c5ba
     :git: https://github.com/jiayi-zhou/playbook-ios
   PlaybookSnapshot:
-    :commit: 280b4ff543f9824bfb5eacd1a9e072c1d9f19f20
-    :git: https://github.com/jiayi-zhou/playbook-ios
-  PlaybookUI:
-    :commit: 1e134daa4f3dad14fc6ca83698886ee68573dd46
+    :commit: 010721033ad7d473f8587ef914b45ba8bf32c5ba
     :git: https://github.com/jiayi-zhou/playbook-ios
 
 SPEC CHECKSUMS:
   AccessibilitySnapshot: fc706b52b64780cc00dbadda8b445320ff3ed17c
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   Playbook: 0df9ed27be6ea997860db078046b70678cf21ea9
-  PlaybookAccessibility: 4f9078fc433975d6a1fa78dc4c980dc7004760db
+  PlaybookAccessibility: 9f5d69e43ae38e6044edb421205b465e3c4657ed
   PlaybookSnapshot: 63e3b5ca89f67825160ca135cc1a262cc41868e0
-  PlaybookUI: 1fcfabed0c38eb898d242aedd4053d7a9dad395e
 
-PODFILE CHECKSUM: 965a07baecfefda65501603ac24ef4eab56eb762
+PODFILE CHECKSUM: f4e47d02b8b913f0928540ce8ba59788b1d2420e
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
