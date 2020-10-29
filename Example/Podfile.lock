@@ -40,7 +40,7 @@ SPEC CHECKSUMS:
   AccessibilitySnapshot: fc706b52b64780cc00dbadda8b445320ff3ed17c
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   Playbook: 0df9ed27be6ea997860db078046b70678cf21ea9
-  PlaybookAccessibilitySnapshot: ae55fe5f5a238b60f5467f5ed0844ed8d0bfc56b
+  PlaybookAccessibilitySnapshot: e57a670ac235450535c7e7463a6fbff5eca799ad
   PlaybookSnapshot: 63e3b5ca89f67825160ca135cc1a262cc41868e0
 
 PODFILE CHECKSUM: e679d27026af17e40580adedba02066c19bdd903

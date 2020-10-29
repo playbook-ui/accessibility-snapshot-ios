@@ -18,7 +18,6 @@ Pod::Spec.new do |spec|
 
     spec.pod_target_xcconfig = {
         'APPLICATION_EXTENSION_API_ONLY' => 'NO',
-        'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
         'ENABLE_BITCODE' => 'NO'
     }
     spec.user_target_xcconfig = {
