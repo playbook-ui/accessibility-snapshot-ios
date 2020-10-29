@@ -6,7 +6,7 @@ targets:
   main:
     paths:
       - Sources
-      - Example/SampleComponent
+      - Example
     rules:
       defaultAccessLevel:
         accessLevel: openOrPublic

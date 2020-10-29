@@ -8,8 +8,8 @@ Text-related accessibility examples
 import Foundation
 import SwiftUI
 
-struct TextExample: View {
-    var body: some View {
+public struct TextExample: View {
+    public var body: some View {
         VStack(alignment: .leading) {
             Text("Automatic Text")
 
@@ -42,4 +42,6 @@ struct TextExample: View {
                 .accessibilityLabel(Text("Text Label"))
         }
     }
+
+    public init() {}
 }

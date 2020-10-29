@@ -1,7 +1,7 @@
 SWIFT_TOOL := Tools/swift-run.sh
 GITHUB_RAW_CONTENT_PATH := https://raw.githubusercontent.com/playbook-ui/playbook-accessibility-ios/main/
 GITHUB_TREE_PATH := https://github.com/playbook-ui/playbook-accessibility-ios/main/
-LIBS := "PlaybookAccessibility"
+LIBS := "PlaybookAccessibilitySnapshot"
 
 .PHONY: all
 all: proj pod-install mod format
@@ -25,15 +25,16 @@ format:
 
 .PHONY: lint
 lint:
-	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -r -m lint Sources
+	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -r -m lint \
+	  Sources Example
 
 .PHONY: pod-lib-lint
 pod-lib-lint:
-	bundle exec pod lib lint PlaybookAccessibility.podspec;
+	bundle exec pod lib lint PlaybookAccessibilitySnapshot.podspec;
 
 .PHONY: pod-release
 pod-release:
-	bundle exec pod trunk push PlaybookAccessibility.podspec;
+	bundle exec pod trunk push PlaybookAccessibilitySnapshot.podspec;
 
 .PHONY: gem
 gem:
@@ -46,4 +47,4 @@ npm:
 
 .PHONY: docs
 docs:
-	$(SWIFT_TOOL) swift-doc generate Sources -n PlaybookAccessibility -f html -o docs
+	$(SWIFT_TOOL) swift-doc generate Sources -n PlaybookAccessibilitySnapshot -f html -o docs

@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 import UIKit
 
-final class RepresentableUIView: UIView {
-    var color: UIColor
+public final class RepresentableUIView: UIView {
+    public var color: UIColor
 
-    init(_ color: UIColor) {
+    public init(_ color: UIColor) {
         self.color = color
         super.init(frame: .zero)
         self.isAccessibilityElement = true
@@ -22,34 +22,38 @@ final class RepresentableUIView: UIView {
         layer.borderWidth = 2
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError()
     }
 }
 
-struct RepresentableView: UIViewRepresentable {
-    func makeUIView(context: UIViewRepresentableContext<RepresentableView>) -> RepresentableUIView {
+public struct RepresentableView: UIViewRepresentable {
+    public func makeUIView(context: UIViewRepresentableContext<RepresentableView>) -> RepresentableUIView {
         return RepresentableUIView(.red)
     }
 
-    func updateUIView(_ nsView: RepresentableUIView, context: UIViewRepresentableContext<RepresentableView>) {
+    public func updateUIView(_ nsView: RepresentableUIView, context: UIViewRepresentableContext<RepresentableView>) {
     }
+
+    public init() {}
 }
 
-final class RepresentableUIViewController: UIViewController {
-    override func loadView() {
+public final class RepresentableUIViewController: UIViewController {
+    public override func loadView() {
         self.view = RepresentableUIView(.blue)
     }
 }
 
-struct RepresentableViewController: UIViewControllerRepresentable {
-    func makeUIViewController(context: UIViewControllerRepresentableContext<RepresentableViewController>) -> RepresentableUIViewController {
+public struct RepresentableViewController: UIViewControllerRepresentable {
+    public func makeUIViewController(context: UIViewControllerRepresentableContext<RepresentableViewController>) -> RepresentableUIViewController {
         return RepresentableUIViewController()
     }
 
-    func updateUIViewController(
+    public func updateUIViewController(
         _ nsViewController: RepresentableUIViewController,
         context: UIViewControllerRepresentableContext<RepresentableViewController>
     ) {
     }
+
+    public init() {}
 }

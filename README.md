@@ -1,10 +1,10 @@
-# PlaybookAccessibility
+# PlaybookAccessibilitySnapshot
 
 <a href="https://developer.apple.com/swift"><img alt="Swift5" src="https://img.shields.io/badge/language-Swift5-orange.svg"/></a>
 <a href="LICENSE"><img alt="Lincense" src="http://img.shields.io/badge/License-Apache%202.0-black.svg"/></a>
 <br>
 
-`PlaybookAccessibility` is an extension to [Playbook](https://github.com/playbook-ui/playbook-ios) that uses [AccessibilitySnapshot](https://github.com/cashapp/AccessibilitySnapshot) to produce snapshots with accessibility information such as activation points and labels.
+`PlaybookAccessibilitySnapshot` is an extension to [Playbook](https://github.com/playbook-ui/playbook-ios) that uses [AccessibilitySnapshot](https://github.com/cashapp/AccessibilitySnapshot) to produce snapshots with accessibility information such as activation points and labels.
 
 ---
 
@@ -15,7 +15,7 @@
 
 ---
 
-### PlaybookAccessibilitySnapshot
+### AccessibilitySnapshot
 
 
 ```swift
@@ -24,7 +24,7 @@ final class AccessibilitySnapshotTests: XCTestCase {
         let directory = ProcessInfo.processInfo.environment["SNAPSHOT_DIR"]!
 
         try Playbook.default.run(
-            PlaybookAccessibilitySnapshot(
+            AccessibilitySnapshot(
                 directory: URL(fileURLWithPath: directory),
                 clean: true,
                 format: .png,
@@ -45,7 +45,7 @@ final class AccessibilitySnapshotTests: XCTestCase {
 - Swift 5.3+
 - Xcode 12.1+ (12.2 beta 3+ required for snapshots with SwiftUI ScrollView)
 - iOS
-  - `PlaybookAccessibility`: 12.0+
+  - `PlaybookAccessibilitySnapshot`: 12.0+
 
 ---
 
@@ -62,7 +62,7 @@ target 'YourPlaybook' do
   target 'YourPlaybookTests' do
     inherit! :search_paths
 
-    pod 'PlaybookAccessibility'
+    pod 'PlaybookAccessibilitySnapshot'
   end
 end
 ```

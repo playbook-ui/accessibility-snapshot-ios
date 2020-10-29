@@ -1,10 +1,10 @@
-import PlaybookAccessibility
+import PlaybookAccessibilitySnapshot
 import XCTest
 
 @testable import SampleApp
 
-final class AccessibilityInfoSnapshotTests: XCTestCase {
-    func testTakeSnapshot() throws {
+public final class AccessibilitySnapshotTests: XCTestCase {
+    public func testTakeSnapshot() throws {
         guard let directory = ProcessInfo.processInfo.environment["SNAPSHOT_DIR"] else {
             fatalError("Set directory to the build environment variables with key `SNAPSHOT_DIR`.")
         }
@@ -12,7 +12,7 @@ final class AccessibilityInfoSnapshotTests: XCTestCase {
         Playbook.default.add(AllScenarios.self)
 
         try Playbook.default.run(
-            AccessibilityInfoSnapshot(
+            AccessibilitySnapshot(
                 directory: URL(fileURLWithPath: directory),
                 clean: true,
                 format: .png,

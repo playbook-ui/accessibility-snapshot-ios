@@ -5,15 +5,13 @@ source 'https://cdn.cocoapods.org/'
 target 'SampleApp' do
 	inherit! :search_paths
 
-	pod 'Playbook', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
+	pod 'Playbook', :git => 'https://github.com/playbook-ui/playbook-ios'
 end
 
 target 'SampleAccessibilitySnapshot' do
 	inherit! :search_paths
 
 	pod 'AccessibilitySnapshot/Core', '~> 0.3.2'
-	pod 'PlaybookSnapshot', :git => 'https://github.com/jiayi-zhou/playbook-ios', :branch => 'accessibility-support'
-	pod 'PlaybookAccessibility', :path => '../PlaybookAccessibility.podspec'
+	pod 'PlaybookSnapshot', :git => 'https://github.com/playbook-ui/playbook-ios'
+	pod 'PlaybookAccessibilitySnapshot', :path => '../PlaybookAccessibilitySnapshot.podspec'
 end
-
-install! 'cocoapods', :disable_input_output_paths => true

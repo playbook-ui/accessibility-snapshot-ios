@@ -9,29 +9,31 @@ import Foundation
 import SwiftUI
 
 // Standard "large space"
-struct LargeSpacer: View {
-    var body: some View {
+public struct LargeSpacer: View {
+    public var body: some View {
         Spacer(minLength: 25)
             .frame(maxHeight: 25)
     }
+
+    public init() {}
 }
 
 // Representation of an example
-struct AccessibilityExample {
-    var name: String
-    var view: AnyView
+public struct AccessibilityExample {
+    public var name: String
+    public var view: AnyView
 
-    init<V: View>(name: String, view: V) {
+    public init<V: View>(name: String, view: V) {
         self.name = name
         self.view = AnyView(view)
     }
 }
 
 // Default corner radius to be used for rounding
-let defaultCornerRadius: CGFloat = 10
+public let defaultCornerRadius: CGFloat = 10
 
 // List of examples to be shown
-let examples = [
+public let examples = [
     AccessibilityExample(name: "Standard Controls", view: StandardControlExample()),
     AccessibilityExample(name: "Images", view: ImageExample()),
     AccessibilityExample(name: "Text", view: TextExample()),
@@ -41,11 +43,11 @@ let examples = [
 ]
 
 // Visual representaiton of an element
-struct AccessibilityElementView: View {
-    let color: Color
-    let text: Text
+public struct AccessibilityElementView: View {
+    public let color: Color
+    public let text: Text
 
-    var body: some View {
+    public var body: some View {
         RoundedRectangle(cornerRadius: defaultCornerRadius)
             .fill(color)
             .frame(width: 128, height: 48)
@@ -59,5 +61,13 @@ struct AccessibilityElementView: View {
                 RoundedRectangle(cornerRadius: defaultCornerRadius)
                     .strokeBorder(Color.gray, lineWidth: 1)
             )
+    }
+
+    public init(
+        color: Color,
+        text: Text
+    ) {
+        self.color = color
+        self.text = text
     }
 }

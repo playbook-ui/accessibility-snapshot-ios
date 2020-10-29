@@ -8,10 +8,10 @@ Standard control accessibility examples
 import Foundation
 import SwiftUI
 
-struct StandardControlExample: View {
-    @State var toggleOn = false
+public struct StandardControlExample: View {
+    @State public var toggleOn = false
 
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading) {
             Button(action: {}) {
                 Text("Button with hint & identifier")
@@ -35,4 +35,6 @@ struct StandardControlExample: View {
                 .accessibilityValue(Text("Purple Color Value"))
         }
     }
+
+    public init() {}
 }

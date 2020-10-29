@@ -8,10 +8,10 @@ Container-related accessibility examples
 import Foundation
 import SwiftUI
 
-struct ContainerExample: View {
-    @State var onState = true
+public struct ContainerExample: View {
+    @State public var onState = true
 
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading) {
             // Create a stack with multiple toggles and a label inside.
             VStack(alignment: .leading) {
@@ -68,4 +68,6 @@ struct ContainerExample: View {
             .accessibilityElement(children: .combine)
         }
     }
+
+    public init() {}
 }

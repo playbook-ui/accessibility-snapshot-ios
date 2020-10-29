@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 
 // Visual frame for an image
-struct ExampleImageView: View {
-    let image: Image
+public struct ExampleImageView: View {
+    public let image: Image
 
-    init(_ image: Image) {
+    public init(_ image: Image) {
         self.image = image
     }
 
-    var body: some View {
+    public var body: some View {
         image.resizable()
             .frame(width: 64, height: 64)
             .scaledToFit()
@@ -32,8 +32,8 @@ struct ExampleImageView: View {
     }
 }
 
-struct ImageExample: View {
-    var body: some View {
+public struct ImageExample: View {
+    public var body: some View {
         VStack(alignment: .leading) {
             Text("Unlabeled Image")
 
@@ -67,4 +67,6 @@ struct ImageExample: View {
             ExampleImageView(Image(decorative: "dot_green"))
         }
     }
+
+    public init() {}
 }

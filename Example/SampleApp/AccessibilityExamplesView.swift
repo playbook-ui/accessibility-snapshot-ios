@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 
 // Contents view for a specific example
-struct ExampleView: View {
-    let example: AccessibilityExample
+public struct ExampleView: View {
+    public let example: AccessibilityExample
 
-    init(_ example: AccessibilityExample) {
+    public init(_ example: AccessibilityExample) {
         self.example = example
     }
 
-    var body: some View {
+    public var body: some View {
         VStack {
             example.view
                 .padding(.horizontal)
@@ -27,8 +27,8 @@ struct ExampleView: View {
 }
 
 // Top-level view for all examples
-struct AccessibilityExamplesView: View {
-    var body: some View {
+public struct AccessibilityExamplesView: View {
+    public var body: some View {
         NavigationView {
             List {
                 ForEach(examples, id: \.name) { example in
@@ -40,4 +40,6 @@ struct AccessibilityExamplesView: View {
             .navigationBarTitle(Text("Examples"))
         }
     }
+
+    public init() {}
 }

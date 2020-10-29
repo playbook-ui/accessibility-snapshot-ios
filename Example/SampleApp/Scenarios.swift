@@ -1,8 +1,8 @@
 import Playbook
 import SwiftUI
 
-struct AllScenarios: ScenarioProvider {
-    static func addScenarios(into playbook: Playbook) {
+public struct AllScenarios: ScenarioProvider {
+    public static func addScenarios(into playbook: Playbook) {
         playbook.addScenarios(of: "Accessibility") {
             Scenario("Standard Controls", layout: .fill) {
                 StandardControlExample()
@@ -35,4 +35,6 @@ struct AllScenarios: ScenarioProvider {
             }
         }
     }
+
+    public init() {}
 }

@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.name = 'PlaybookAccessibility'
+    spec.name = 'PlaybookAccessibilitySnapshot'
     spec.version  = `cat .version`
     spec.authors = { 'jiayi-zhou' => 'jiayi.zhou98@gmail.com', 'ra1028' => 'r.fe51028.r@gmail.com' }
     spec.homepage = 'https://github.com/playbook-ui/playbook-ios'

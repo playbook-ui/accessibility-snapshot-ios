@@ -8,11 +8,11 @@ Action accessibility examples
 import Foundation
 import SwiftUI
 
-struct ActionExample: View {
-    @State var defaultActionFired = false
-    @State var customAction1Fired = false
-    @State var customAction2Fired = false
-    @State var incrementIndex = 0
+public struct ActionExample: View {
+    @State public var defaultActionFired = false
+    @State public var customAction1Fired = false
+    @State public var customAction2Fired = false
+    @State public var incrementIndex = 0
 
     // Color to be used for the default action element
     private var defaultActionColor: Color {
@@ -49,7 +49,7 @@ struct ActionExample: View {
         }
     }
 
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading) {
             Text("Element with default action")
 
@@ -80,4 +80,6 @@ struct ActionExample: View {
                 .accessibilityAdjustableAction(adjustAction)
         }
     }
+
+    public init() {}
 }

@@ -8,8 +8,8 @@ Platform representable accessibility examples
 import Foundation
 import SwiftUI
 
-struct RepresentableExample: View {
-    var body: some View {
+public struct RepresentableExample: View {
+    public var body: some View {
         VStack(alignment: .leading) {
             Text("Element with representable view")
 
@@ -30,4 +30,6 @@ struct RepresentableExample: View {
                 .accessibilityValue(Text("representable view controller accessibility value"))
         }
     }
+
+    public init() {}
 }
