@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0F8EC72083668BF0BA2A0FE9"
+               BlueprintIdentifier = "2988EB7AD33F8FCC59A8289D"
                BuildableName = "SampleApp.app"
                BlueprintName = "SampleApp"
-               ReferencedContainer = "container:PlaybookAccessibilitySnapshotExample.xcodeproj">
+               ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,20 +33,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8F154A418720B082348D5E9"
+               BlueprintIdentifier = "98BF8BA5CD2934236B87E36F"
                BuildableName = "SampleAccessibilitySnapshot.xctest"
                BlueprintName = "SampleAccessibilitySnapshot"
-               ReferencedContainer = "container:PlaybookAccessibilitySnapshotExample.xcodeproj">
+               ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0F8EC72083668BF0BA2A0FE9"
+            BlueprintIdentifier = "2988EB7AD33F8FCC59A8289D"
             BuildableName = "SampleApp.app"
             BlueprintName = "SampleApp"
-            ReferencedContainer = "container:PlaybookAccessibilitySnapshotExample.xcodeproj">
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <CommandLineArguments>
@@ -77,10 +77,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0F8EC72083668BF0BA2A0FE9"
+            BlueprintIdentifier = "2988EB7AD33F8FCC59A8289D"
             BuildableName = "SampleApp.app"
             BlueprintName = "SampleApp"
-            ReferencedContainer = "container:PlaybookAccessibilitySnapshotExample.xcodeproj">
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -107,10 +107,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0F8EC72083668BF0BA2A0FE9"
+            BlueprintIdentifier = "2988EB7AD33F8FCC59A8289D"
             BuildableName = "SampleApp.app"
             BlueprintName = "SampleApp"
-            ReferencedContainer = "container:PlaybookAccessibilitySnapshotExample.xcodeproj">
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>

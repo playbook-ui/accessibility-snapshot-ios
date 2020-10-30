@@ -1,9 +1,9 @@
-name: PlaybookAccessibilitySnapshotExample
+name: Example
 options:
   bundleIdPrefix: app.playbook-ui.accessibility.Example
   deploymentTarget:
     iOS: 14.0
-  
+
 targets:
   SampleApp:
     Example:
@@ -19,7 +19,7 @@ targets:
         SNAPSHOT_DIR: $(SOURCE_ROOT)/Snapshots
     attributes:
       ProvisioningStyle: Manual
-      
+
   SampleAccessibilitySnapshot:
     type: bundle.unit-test
     platform: iOS

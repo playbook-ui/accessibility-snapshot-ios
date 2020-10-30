@@ -6,7 +6,8 @@ targets:
   main:
     paths:
       - Sources
-      - Example
+      - Example/SampleApp
+      - Example/SampleAccessibilitySnapshot
     rules:
       defaultAccessLevel:
         accessLevel: openOrPublic

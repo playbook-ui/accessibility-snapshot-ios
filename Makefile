@@ -19,13 +19,11 @@ mod:
 
 .PHONY: format
 format:
-	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -i -r -m format \
-	  Sources Example
+	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -i -r -m format Sources Example/SampleApp Example/SampleAccessibilitySnapshot
 
 .PHONY: lint
 lint:
-	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -r -m lint \
-	  Sources Example
+	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -r -m lint Sources Example/SampleApp Example/SampleAccessibilitySnapshot
 
 .PHONY: pod-lib-lint
 pod-lib-lint:
