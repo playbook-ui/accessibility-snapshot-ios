@@ -1,0 +1,17 @@
+use_frameworks!
+platform :ios, '14.0'
+source 'https://cdn.cocoapods.org/'
+
+target 'SampleApp' do
+	inherit! :search_paths
+
+	pod 'Playbook', :git => 'https://github.com/playbook-ui/playbook-ios'
+end
+
+target 'SampleAccessibilitySnapshot' do
+	inherit! :search_paths
+
+	pod 'AccessibilitySnapshot/Core', '~> 0.3.2'
+	pod 'PlaybookSnapshot', :git => 'https://github.com/playbook-ui/playbook-ios'
+	pod 'PlaybookAccessibilitySnapshot', :path => '../PlaybookAccessibilitySnapshot.podspec'
+end

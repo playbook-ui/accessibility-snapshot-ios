@@ -1,0 +1,48 @@
+PODS:
+  - AccessibilitySnapshot/Core (0.3.2):
+    - fishhook (~> 0.2)
+  - fishhook (0.2)
+  - Playbook (0.1.2)
+  - PlaybookAccessibilitySnapshot (0.1.0):
+    - AccessibilitySnapshot/Core (~> 0.3.2)
+    - PlaybookSnapshot (~> 0.1.2)
+  - PlaybookSnapshot (0.1.2):
+    - Playbook (~> 0)
+
+DEPENDENCIES:
+  - AccessibilitySnapshot/Core (~> 0.3.2)
+  - Playbook (from `https://github.com/playbook-ui/playbook-ios`)
+  - PlaybookAccessibilitySnapshot (from `../PlaybookAccessibilitySnapshot.podspec`)
+  - PlaybookSnapshot (from `https://github.com/playbook-ui/playbook-ios`)
+
+SPEC REPOS:
+  trunk:
+    - AccessibilitySnapshot
+    - fishhook
+
+EXTERNAL SOURCES:
+  Playbook:
+    :git: https://github.com/playbook-ui/playbook-ios
+  PlaybookAccessibilitySnapshot:
+    :path: "../PlaybookAccessibilitySnapshot.podspec"
+  PlaybookSnapshot:
+    :git: https://github.com/playbook-ui/playbook-ios
+
+CHECKOUT OPTIONS:
+  Playbook:
+    :commit: f391da81c99110c8cedf032beaea8ce69dfd4d0c
+    :git: https://github.com/playbook-ui/playbook-ios
+  PlaybookSnapshot:
+    :commit: f391da81c99110c8cedf032beaea8ce69dfd4d0c
+    :git: https://github.com/playbook-ui/playbook-ios
+
+SPEC CHECKSUMS:
+  AccessibilitySnapshot: fc706b52b64780cc00dbadda8b445320ff3ed17c
+  fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
+  Playbook: 0df9ed27be6ea997860db078046b70678cf21ea9
+  PlaybookAccessibilitySnapshot: e57a670ac235450535c7e7463a6fbff5eca799ad
+  PlaybookSnapshot: 63e3b5ca89f67825160ca135cc1a262cc41868e0
+
+PODFILE CHECKSUM: e679d27026af17e40580adedba02066c19bdd903
+
+COCOAPODS: 1.10.0
