@@ -1,6 +1,6 @@
 SWIFT_TOOL := Tools/swift-run.sh
-GITHUB_RAW_CONTENT_PATH := https://raw.githubusercontent.com/playbook-ui/playbook-accessibility-ios/main/
-GITHUB_TREE_PATH := https://github.com/playbook-ui/playbook-accessibility-ios/main/
+GITHUB_RAW_CONTENT_PATH := https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/
+GITHUB_TREE_PATH := https://github.com/playbook-ui/accessibility-snapshot-ios/main/
 LIBS := "PlaybookAccessibilitySnapshot"
 
 .PHONY: all

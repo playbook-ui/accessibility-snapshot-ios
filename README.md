@@ -36,7 +36,7 @@ final class AccessibilitySnapshotTests: XCTestCase {
 }
 ```
 
-<img src="https://raw.githubusercontent.com/jiayi-zhou/playbook-accessibility-ios/main/assets/accessibility-snapshot.png" alt="accessibility snapshot">
+<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/accessibility-snapshot.png" alt="accessibility snapshot">
 
 ---
 
