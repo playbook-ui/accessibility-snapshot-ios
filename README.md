@@ -65,7 +65,6 @@ Add the following to your `Podfile`:
 ```ruby
 target 'YourPlaybook' do
   pod 'Playbook'
-  pod 'PlaybookUI'
 
   target 'YourPlaybookTests' do
     inherit! :search_paths
