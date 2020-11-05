@@ -11,7 +11,7 @@ proj:
 
 .PHONY: pod-install
 pod-install:
-	bundle exec pod install --project-directory=Example
+	bundle exec pod install --project-directory=Example || bundle exec pod install --repo-update --project-directory=Example
 
 .PHONY: mod
 mod:
@@ -37,6 +37,10 @@ pod-release:
 gem:
 	bundle config path vendor/bundle
 	bundle install --jobs 4 --retry 3
+
+.PHONY: npm
+npm:
+	npm i
 
 .PHONY: docs
 docs:
