@@ -29,7 +29,7 @@ pod-lib-lint:
 
 .PHONY: pod-release
 pod-release:
-	bundle exec pod trunk push PlaybookAccessibilitySnapshot.podspec
+	bundle exec pod trunk push --verbose PlaybookAccessibilitySnapshot.podspec
 
 .PHONY: gem
 gem:
