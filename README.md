@@ -76,6 +76,14 @@ end
 
 ---
 
+## Development
+
+1. Run `make proj` at the root of this repository.
+1. Open `Example/Example.xcworkspace` via Xcode.
+1. Develop a PlaybookAccessibilitySnapshot installed as a development pods.
+
+---
+
 ## License
 
 Playbook is released under the [Apache 2.0 License](https://github.com/playbook-ui/accessibility-snapshot-ios/tree/main/LICENSE).

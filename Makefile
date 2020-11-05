@@ -3,22 +3,20 @@ GITHUB_RAW_CONTENT_PATH := https://raw.githubusercontent.com/playbook-ui/accessi
 GITHUB_TREE_PATH := https://github.com/playbook-ui/accessibility-snapshot-ios/main/
 
 .PHONY: all
-all: proj pod-install mod format
+all: proj format
 
 .PHONY: proj
 proj:
 	$(SWIFT_TOOL) xcodegen --spec Example/project.yml --project Example
+	make pod-install
 
 .PHONY: pod-install
 pod-install:
 	bundle exec pod install --project-directory=Example || bundle exec pod install --repo-update --project-directory=Example
 
-.PHONY: mod
-mod:
-	$(SWIFT_TOOL) swift-mod
-
 .PHONY: format
 format:
+	$(SWIFT_TOOL) swift-mod
 	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -i -r -m format Sources Example/SampleAccessibilitySnapshot
 
 .PHONY: lint
