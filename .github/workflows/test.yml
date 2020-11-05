@@ -94,12 +94,12 @@ jobs:
 
       - name: Install CocoaPods packages
         if: steps.cocoapods-cache.cache.outputs.cache-hit != 'true'
-        run: pod-install
+        run: make pod-install
 
       - name: Generate snapshots
         run: set -o pipefail && xcodebuild build-for-testing test-without-building -workspace Example/Example.xcworkspace -scheme SampleApp -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12 Pro' ENABLE_TESTABILITY=YES | xcpretty -c
 
       - name: Visual regression test
-        run: npx percy upload Snapshots
+        run: npx percy upload Example/Snapshots
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
