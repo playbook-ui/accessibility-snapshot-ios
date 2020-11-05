@@ -42,7 +42,7 @@ npm:
 
 .PHONY: docs
 docs:
-	$(SWIFT_TOOL) swift-doc generate Sources -n PlaybookAccessibilitySnapshot -f html -o docs
+	$(SWIFT_TOOL) swift-doc generate Sources -n PlaybookAccessibilitySnapshot -f html -o docs --base-url https://playbook-ui.github.io/accessibility-snapshot-ios
 
 .PHONY: fix-readme-links
 fix-readme-links:
