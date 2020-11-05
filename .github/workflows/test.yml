@@ -7,7 +7,7 @@ on:
 jobs:
   validation:
     name: Validation
-    runs-on: macOS-11
+    runs-on: macOS-11.0
     strategy:
       matrix:
         xcode_version:
