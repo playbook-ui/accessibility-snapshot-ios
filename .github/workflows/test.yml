@@ -41,8 +41,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: Tools/.build
-          key: ${{ runner.os }}-${{ matrix.xcode_version }}-1-spm-${{ hashFiles('Tools/Package.resolved') }}
-          restore-keys: ${{ runner.os }}-${{ matrix.xcode_version }}-1-spm-
+          key: ${{ runner.os }}-${{ matrix.xcode_version }}-2-spm-${{ hashFiles('Tools/Package.resolved') }}
+          restore-keys: ${{ runner.os }}-${{ matrix.xcode_version }}-2-spm-
 
       - name: Get CocoaPods cache
         id: cocoapods-cache
@@ -65,6 +65,8 @@ jobs:
 
       - name: Validation
         run: make all && [ -z "$(git status --porcelain)" ] && make lint
+        env:
+          SPM_FORCE_BUILD: 1
 
       - name: Generate snapshots
         run: set -o pipefail && xcodebuild build-for-testing test-without-building -workspace Example/Example.xcworkspace -scheme SampleApp -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12 Pro' ENABLE_TESTABILITY=YES | xcpretty -c
