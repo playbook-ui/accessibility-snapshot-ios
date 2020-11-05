@@ -44,7 +44,21 @@ final class AccessibilitySnapshotTests: XCTestCase {
 }
 ```
 
-<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/accessibility-snapshot.png" alt="accessibility snapshot">
+<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/snapshot.png" alt="snapshot">
+
+|Sample|Before|After|
+|:-----|:-----|:----|
+|<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/sample.png" alt="sample">|<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/sample-before.png" alt="before">|<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/sample-after.png" alt="after">|
+
+---
+
+### Integration with Third-party Tools
+
+The generated snapshot images with accessibility information can be used for more advanced visual regression testing by using a variety of third party tools.  
+
+#### [percy](https://percy.io)
+
+<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/percy.png" alt="percy" width="600">
 
 ---
 
