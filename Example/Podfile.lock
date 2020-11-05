@@ -12,7 +12,6 @@ PODS:
 DEPENDENCIES:
   - Playbook (~> 0.2.0)
   - PlaybookAccessibilitySnapshot (from `../PlaybookAccessibilitySnapshot.podspec`)
-  - PlaybookSnapshot (~> 0.2.0)
 
 SPEC REPOS:
   trunk:
@@ -32,6 +31,6 @@ SPEC CHECKSUMS:
   PlaybookAccessibilitySnapshot: a2c8e153a1bae7e9e1527d5f37f272bd3f3cdfcd
   PlaybookSnapshot: 5a1caa4eab596c0da23613b15c506bdbeeedc8c0
 
-PODFILE CHECKSUM: faa37e96a1de8eb0b94cdf3058d4e2a635174bf9
+PODFILE CHECKSUM: f338bdd8abed3a3355aaa32bab8dc4ee0137d714
 
 COCOAPODS: 1.10.0

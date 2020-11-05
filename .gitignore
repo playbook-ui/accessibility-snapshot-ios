@@ -20,6 +20,8 @@ build/
 archive/
 *.xcframework
 *.xcworkspacedata
+*.xcworkspace
+*.xcodeproj
 
 ## Gem
 .bundle

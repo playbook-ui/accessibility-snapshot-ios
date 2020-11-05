@@ -3,27 +3,25 @@ GITHUB_RAW_CONTENT_PATH := https://raw.githubusercontent.com/playbook-ui/accessi
 GITHUB_TREE_PATH := https://github.com/playbook-ui/accessibility-snapshot-ios/main/
 
 .PHONY: all
-all: proj pod-install mod format
+all: proj format
 
 .PHONY: proj
 proj:
 	$(SWIFT_TOOL) xcodegen --spec Example/project.yml --project Example
+	make pod-install
 
 .PHONY: pod-install
 pod-install:
-	bundle exec pod install --project-directory=Example
-
-.PHONY: mod
-mod:
-	$(SWIFT_TOOL) swift-mod
+	bundle exec pod install --project-directory=Example || bundle exec pod install --repo-update --project-directory=Example
 
 .PHONY: format
 format:
-	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -i -r -m format Sources Example/SampleApp Example/SampleAccessibilitySnapshot
+	$(SWIFT_TOOL) swift-mod
+	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -i -r -m format Sources Example/SampleAccessibilitySnapshot
 
 .PHONY: lint
 lint:
-	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -r -m lint Sources Example/SampleApp Example/SampleAccessibilitySnapshot
+	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -r -m lint Sources Example/SampleAccessibilitySnapshot
 
 .PHONY: pod-lib-lint
 pod-lib-lint:
@@ -37,6 +35,10 @@ pod-release:
 gem:
 	bundle config path vendor/bundle
 	bundle install --jobs 4 --retry 3
+
+.PHONY: npm
+npm:
+	npm i
 
 .PHONY: docs
 docs:

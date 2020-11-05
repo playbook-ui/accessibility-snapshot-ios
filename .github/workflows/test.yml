@@ -1,0 +1,77 @@
+name: GitHub Actions
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    name: Test on macOS
+    runs-on: macOS-11.0
+    strategy:
+      matrix:
+        xcode_version:
+          - "12.2"
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_${{ matrix.xcode_version }}.app
+    steps:
+      - uses: actions/checkout@v2
+      - name: Show environments
+        run: |
+          swift --version
+          xcodebuild -version
+
+      - name: Get ruby gem cache
+        id: gem-cache
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-1-gem-${{ hashFiles('Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-1-gem-
+
+      - name: Get npm cache
+        id: npm-cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-0-npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: ${{ runner.os }}-0-npm-
+
+      - name: Get SwiftPM cache
+        uses: actions/cache@v2
+        with:
+          path: Tools/.build
+          key: ${{ runner.os }}-${{ matrix.xcode_version }}-2-spm-${{ hashFiles('Tools/Package.resolved') }}
+          restore-keys: ${{ runner.os }}-${{ matrix.xcode_version }}-2-spm-
+
+      - name: Get CocoaPods cache
+        id: cocoapods-cache
+        uses: actions/cache@v2
+        with:
+          path: Pods
+          key: ${{ runner.os }}-1-cocoapods-${{ hashFiles('Example/Podfile.lock') }}
+          restore-keys: ${{ runner.os }}-1-cocoapods-
+
+      - name: Install npm packages
+        if: steps.npm-cache.cache.outputs.cache-hit != 'true'
+        run: make npm
+
+      - name: Install ruby gems
+        if: steps.gem-cache.cache.outputs.cache-hit != 'true'
+        run: make gem
+
+      - name: Podspec lint
+        run: make pod-lib-lint
+
+      - name: Validation
+        run: make all && [ -z "$(git status --porcelain)" ] && make lint
+        env:
+          SPM_FORCE_BUILD: 1
+
+      - name: Generate snapshots
+        run: set -o pipefail && xcodebuild build-for-testing test-without-building -workspace Example/Example.xcworkspace -scheme SampleApp -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12 Pro' ENABLE_TESTABILITY=YES | xcpretty -c
+
+      - name: Visual regression test
+        run: npx percy upload Example/Snapshots
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

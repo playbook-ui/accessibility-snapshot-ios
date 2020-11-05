@@ -1,6 +1,9 @@
-use_frameworks!
 platform :ios, '14.0'
 source 'https://cdn.cocoapods.org/'
+use_frameworks!
+inhibit_all_warnings!
+
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 target 'SampleApp' do
 	inherit! :search_paths
@@ -11,6 +14,5 @@ end
 target 'SampleAccessibilitySnapshot' do
 	inherit! :search_paths
 
-	pod 'PlaybookSnapshot', '~> 0.2.0'
 	pod 'PlaybookAccessibilitySnapshot', :path => '../PlaybookAccessibilitySnapshot.podspec'
 end
