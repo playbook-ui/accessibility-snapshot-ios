@@ -1,48 +1,37 @@
 PODS:
-  - AccessibilitySnapshot/Core (0.3.2):
+  - AccessibilitySnapshot/Core (0.4.0):
     - fishhook (~> 0.2)
   - fishhook (0.2)
-  - Playbook (0.1.2)
+  - Playbook (0.2.0)
   - PlaybookAccessibilitySnapshot (0.1.0):
-    - AccessibilitySnapshot/Core (~> 0.3.2)
-    - PlaybookSnapshot (~> 0.1.2)
-  - PlaybookSnapshot (0.1.2):
-    - Playbook (~> 0)
+    - AccessibilitySnapshot/Core (~> 0.4.0)
+    - PlaybookSnapshot (~> 0.2.0)
+  - PlaybookSnapshot (0.2.0):
+    - Playbook (~> 0.2.0)
 
 DEPENDENCIES:
-  - AccessibilitySnapshot/Core (~> 0.3.2)
-  - Playbook (from `https://github.com/playbook-ui/playbook-ios`)
+  - Playbook (~> 0.2.0)
   - PlaybookAccessibilitySnapshot (from `../PlaybookAccessibilitySnapshot.podspec`)
-  - PlaybookSnapshot (from `https://github.com/playbook-ui/playbook-ios`)
+  - PlaybookSnapshot (~> 0.2.0)
 
 SPEC REPOS:
   trunk:
     - AccessibilitySnapshot
     - fishhook
+    - Playbook
+    - PlaybookSnapshot
 
 EXTERNAL SOURCES:
-  Playbook:
-    :git: https://github.com/playbook-ui/playbook-ios
   PlaybookAccessibilitySnapshot:
     :path: "../PlaybookAccessibilitySnapshot.podspec"
-  PlaybookSnapshot:
-    :git: https://github.com/playbook-ui/playbook-ios
-
-CHECKOUT OPTIONS:
-  Playbook:
-    :commit: f391da81c99110c8cedf032beaea8ce69dfd4d0c
-    :git: https://github.com/playbook-ui/playbook-ios
-  PlaybookSnapshot:
-    :commit: f391da81c99110c8cedf032beaea8ce69dfd4d0c
-    :git: https://github.com/playbook-ui/playbook-ios
 
 SPEC CHECKSUMS:
-  AccessibilitySnapshot: fc706b52b64780cc00dbadda8b445320ff3ed17c
+  AccessibilitySnapshot: 82ee75a4b53b34b523f40bc476ca2dada35c098e
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
-  Playbook: 0df9ed27be6ea997860db078046b70678cf21ea9
-  PlaybookAccessibilitySnapshot: e57a670ac235450535c7e7463a6fbff5eca799ad
-  PlaybookSnapshot: 63e3b5ca89f67825160ca135cc1a262cc41868e0
+  Playbook: 43afef6347b08ca62719d0cbbe67a30c813f74c3
+  PlaybookAccessibilitySnapshot: a2c8e153a1bae7e9e1527d5f37f272bd3f3cdfcd
+  PlaybookSnapshot: 5a1caa4eab596c0da23613b15c506bdbeeedc8c0
 
-PODFILE CHECKSUM: e679d27026af17e40580adedba02066c19bdd903
+PODFILE CHECKSUM: faa37e96a1de8eb0b94cdf3058d4e2a635174bf9
 
 COCOAPODS: 1.10.0

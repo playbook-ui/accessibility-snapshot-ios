@@ -5,13 +5,12 @@ source 'https://cdn.cocoapods.org/'
 target 'SampleApp' do
 	inherit! :search_paths
 
-	pod 'Playbook', :git => 'https://github.com/playbook-ui/playbook-ios'
+	pod 'Playbook', '~> 0.2.0'
 end
 
 target 'SampleAccessibilitySnapshot' do
 	inherit! :search_paths
 
-	pod 'AccessibilitySnapshot/Core', '~> 0.3.2'
-	pod 'PlaybookSnapshot', :git => 'https://github.com/playbook-ui/playbook-ios'
+	pod 'PlaybookSnapshot', '~> 0.2.0'
 	pod 'PlaybookAccessibilitySnapshot', :path => '../PlaybookAccessibilitySnapshot.podspec'
 end
