@@ -19,7 +19,7 @@
 ## Usage
 
 - [API Document](https://playbook-ui.github.io/accessibility-snapshot-ios)
-- [Example App](https://github.com/playbook-ui/accessibility-snapshot-ios/tree/master/Example)
+- [Example App](https://github.com/playbook-ui/accessibility-snapshot-ios/tree/main/Example)
 
 ---
 
@@ -78,7 +78,7 @@ end
 
 ## License
 
-Playbook is released under the [Apache 2.0 License](https://github.com/playbook-ui/playbook-ios/tree/master/LICENSE).
+Playbook is released under the [Apache 2.0 License](https://github.com/playbook-ui/accessibility-snapshot-ios/tree/main/LICENSE).
 
 <br>
 <p align="center">
