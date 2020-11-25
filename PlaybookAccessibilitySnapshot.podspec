@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
     spec.ios.frameworks = 'XCTest'
     spec.dependency 'PlaybookSnapshot', "~> 0.2.0"
     spec.dependency 'AccessibilitySnapshot/Core', "~> 0.4.0"
+    spec.dependency 'GTXiLib', "~> 3.1.0"
 
     spec.pod_target_xcconfig = {
         'APPLICATION_EXTENSION_API_ONLY' => 'NO',

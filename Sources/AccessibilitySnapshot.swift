@@ -1,5 +1,6 @@
 import AccessibilitySnapshot
 import PlaybookSnapshot
+import GTXiLib
 import XCTest
 
 /// The testing tool which generates snapshot images from scenarios managed by `Playbook`.
@@ -40,6 +41,11 @@ public struct AccessibilitySnapshot: TestTool {
                     viewRenderingMode: .renderLayerInContext,
                     activationPointDisplayMode: .always
                 )
+                
+                let toolkit = GTXToolKit.toolkitWithAllDefaultChecks()
+                let result = toolkit.resultFromCheckingAllElements(fromRootElements: [view])
+                
+                print(result.errorsFound)
 
                 accessibilityView.parseAccessibility(useMonochromeSnapshot: false)
                 accessibilityView.sizeToFit()
