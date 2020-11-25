@@ -1,0 +1,6 @@
+{
+    "private": true,
+    "devDependencies": {
+        "percy": "0.28.4"
+    }
+}

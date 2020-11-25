@@ -8,13 +8,12 @@ PODS:
     - AccessibilitySnapshot/Core (~> 0.4.0)
     - GTXiLib (~> 3.1.0)
     - PlaybookSnapshot (~> 0.2.0)
-  - PlaybookSnapshot (0.2.0):
+  - PlaybookSnapshot (0.2.1):
     - Playbook (~> 0.2.0)
 
 DEPENDENCIES:
   - Playbook (~> 0.2.0)
   - PlaybookAccessibilitySnapshot (from `../PlaybookAccessibilitySnapshot.podspec`)
-  - PlaybookSnapshot (~> 0.2.0)
 
 SPEC REPOS:
   trunk:
@@ -33,9 +32,9 @@ SPEC CHECKSUMS:
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   GTXiLib: 7042bf6a7ea130a8a67026ab8c7d4d35ac7cab6c
   Playbook: 43afef6347b08ca62719d0cbbe67a30c813f74c3
-  PlaybookAccessibilitySnapshot: fb8ed241c0fa280ac135817a5a09eb6a15f04c93
-  PlaybookSnapshot: 5a1caa4eab596c0da23613b15c506bdbeeedc8c0
+  PlaybookAccessibilitySnapshot: 8924dd26cc075c5998ae61dd9e84c6f99bf1ba1f
+  PlaybookSnapshot: 21815a687fd3fd872f8a1861e47632da63891c78
 
-PODFILE CHECKSUM: faa37e96a1de8eb0b94cdf3058d4e2a635174bf9
+PODFILE CHECKSUM: f338bdd8abed3a3355aaa32bab8dc4ee0137d714
 
 COCOAPODS: 1.10.0

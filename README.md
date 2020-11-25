@@ -19,7 +19,7 @@
 ## Usage
 
 - [API Document](https://playbook-ui.github.io/accessibility-snapshot-ios)
-- [Example App](https://github.com/playbook-ui/accessibility-snapshot-ios/tree/master/Example)
+- [Example App](https://github.com/playbook-ui/accessibility-snapshot-ios/tree/main/Example)
 
 ---
 
@@ -44,7 +44,21 @@ final class AccessibilitySnapshotTests: XCTestCase {
 }
 ```
 
-<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/accessibility-snapshot.png" alt="accessibility snapshot">
+<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/snapshot.png" alt="snapshot">
+
+|Sample|Before|After|
+|:-----|:-----|:----|
+|<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/sample.png" alt="sample">|<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/sample-before.png" alt="before">|<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/sample-after.png" alt="after">|
+
+---
+
+### Integration with Third-party Tools
+
+The generated snapshot images with accessibility information can be used for more advanced visual regression testing by using a variety of third party tools.  
+
+#### [percy](https://percy.io)
+
+<img src="https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/assets/percy.png" alt="percy" width="600">
 
 ---
 
@@ -65,7 +79,6 @@ Add the following to your `Podfile`:
 ```ruby
 target 'YourPlaybook' do
   pod 'Playbook'
-  pod 'PlaybookUI'
 
   target 'YourPlaybookTests' do
     inherit! :search_paths
@@ -77,9 +90,17 @@ end
 
 ---
 
+## Development
+
+1. Run `make proj` at the root of this repository.
+1. Open `Example/Example.xcworkspace` via Xcode.
+1. Develop a PlaybookAccessibilitySnapshot installed as a development pods.
+
+---
+
 ## License
 
-Playbook is released under the [Apache 2.0 License](https://github.com/playbook-ui/playbook-ios/tree/master/LICENSE).
+Playbook is released under the [Apache 2.0 License](https://github.com/playbook-ui/accessibility-snapshot-ios/tree/main/LICENSE).
 
 <br>
 <p align="center">
