@@ -2,7 +2,7 @@ name: Example
 options:
   bundleIdPrefix: app.playbook-ui.accessibility.Example
   deploymentTarget:
-    iOS: 14.0
+    iOS: 14.2
 
 targets:
   SampleApp:

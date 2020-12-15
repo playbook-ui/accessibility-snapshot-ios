@@ -1,4 +1,4 @@
-platform :ios, '14.0'
+platform :ios, '14.2'
 source 'https://cdn.cocoapods.org/'
 use_frameworks!
 inhibit_all_warnings!
@@ -8,7 +8,7 @@ ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 target 'SampleApp' do
 	inherit! :search_paths
 
-	pod 'Playbook', '~> 0.2.0'
+	pod 'Playbook', '~> 0.2.1'
 end
 
 target 'SampleAccessibilitySnapshot' do
