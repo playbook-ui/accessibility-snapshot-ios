@@ -65,7 +65,7 @@ The generated snapshot images with accessibility information can be used for mor
 ## Requirements
 
 - Swift 5.3+
-- Xcode 12.1+ (12.2 beta 3+ required for snapshots with SwiftUI ScrollView)
+- Xcode 12.2+
 - iOS 12.0+
 
 ---

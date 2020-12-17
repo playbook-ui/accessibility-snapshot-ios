@@ -1,22 +1,19 @@
 PODS:
-  - AccessibilitySnapshot/Core (0.4.0):
-    - fishhook (~> 0.2)
-  - fishhook (0.2)
-  - Playbook (0.2.0)
-  - PlaybookAccessibilitySnapshot (0.1.0):
-    - AccessibilitySnapshot/Core (~> 0.4.0)
-    - PlaybookSnapshot (~> 0.2.0)
-  - PlaybookSnapshot (0.2.0):
+  - AccessibilitySnapshot/Core (0.4.1)
+  - Playbook (0.2.1)
+  - PlaybookAccessibilitySnapshot (0.1.1):
+    - AccessibilitySnapshot/Core (~> 0.4.1)
+    - PlaybookSnapshot (~> 0.2.1)
+  - PlaybookSnapshot (0.2.1):
     - Playbook (~> 0.2.0)
 
 DEPENDENCIES:
-  - Playbook (~> 0.2.0)
+  - Playbook (~> 0.2.1)
   - PlaybookAccessibilitySnapshot (from `../PlaybookAccessibilitySnapshot.podspec`)
 
 SPEC REPOS:
   trunk:
     - AccessibilitySnapshot
-    - fishhook
     - Playbook
     - PlaybookSnapshot
 
@@ -25,12 +22,11 @@ EXTERNAL SOURCES:
     :path: "../PlaybookAccessibilitySnapshot.podspec"
 
 SPEC CHECKSUMS:
-  AccessibilitySnapshot: 82ee75a4b53b34b523f40bc476ca2dada35c098e
-  fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
-  Playbook: 43afef6347b08ca62719d0cbbe67a30c813f74c3
-  PlaybookAccessibilitySnapshot: 82afb2747ecb4a10fa24b7fcaa6a56977b2afa79
-  PlaybookSnapshot: 5a1caa4eab596c0da23613b15c506bdbeeedc8c0
+  AccessibilitySnapshot: 7d696575ee0df4371dde653b3087aaa9cfe4c300
+  Playbook: 7c69cf1ccb790f730cdc853753910cd3673fe1af
+  PlaybookAccessibilitySnapshot: e3755a0bbc7352204bf43661482a0674cdb29888
+  PlaybookSnapshot: 21815a687fd3fd872f8a1861e47632da63891c78
 
-PODFILE CHECKSUM: f338bdd8abed3a3355aaa32bab8dc4ee0137d714
+PODFILE CHECKSUM: 36a2ab796517e070d29584ada311d6a66782f841
 
 COCOAPODS: 1.10.0
