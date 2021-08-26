@@ -1,4 +1,4 @@
-SWIFT_TOOL := Tools/swift-run.sh
+SWIFT_RUN := swift run -c release
 GITHUB_RAW_CONTENT_PATH := https://raw.githubusercontent.com/playbook-ui/accessibility-snapshot-ios/main/
 GITHUB_TREE_PATH := https://github.com/playbook-ui/accessibility-snapshot-ios/main/
 
@@ -7,7 +7,7 @@ all: proj format
 
 .PHONY: proj
 proj:
-	$(SWIFT_TOOL) xcodegen --spec Example/project.yml --project Example
+	$(SWIFT_RUN) --package-path Tools xcodegen --spec Example/project.yml --project Example
 	make pod-install
 
 .PHONY: pod-install
@@ -16,12 +16,11 @@ pod-install:
 
 .PHONY: format
 format:
-	$(SWIFT_TOOL) swift-mod
-	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -i -r -m format Sources Example/SampleAccessibilitySnapshot
+	$(SWIFT_RUN) --package-path Tools swift-format -i -r -m format Sources Example/SampleAccessibilitySnapshot
 
 .PHONY: lint
 lint:
-	$(SWIFT_TOOL) swift-format --configuration .swift-format.json -r -m lint Sources Example/SampleAccessibilitySnapshot
+	$(SWIFT_RUN) --package-path Tools swift-format -r -m lint Sources Example/SampleAccessibilitySnapshot
 
 .PHONY: pod-lib-lint
 pod-lib-lint:
@@ -42,7 +41,7 @@ npm:
 
 .PHONY: docs
 docs:
-	$(SWIFT_TOOL) swift-doc generate Sources -n PlaybookAccessibilitySnapshot -f html -o docs --base-url https://playbook-ui.github.io/accessibility-snapshot-ios
+	$(SWIFT_RUN) --package-path Tools/Doc swift-doc generate Sources -n PlaybookAccessibilitySnapshot -f html -o docs --base-url https://playbook-ui.github.io/accessibility-snapshot-ios
 
 .PHONY: fix-readme-links
 fix-readme-links:
