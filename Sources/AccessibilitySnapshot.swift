@@ -1,6 +1,11 @@
-import AccessibilitySnapshotCore
 import PlaybookSnapshot
 import UIKit
+
+#if SWIFT_PACKAGE
+import AccessibilitySnapshotCore
+#else
+import AccessibilitySnapshot
+#endif
 
 /// The testing tool which generates snapshot images from scenarios managed by `Playbook`.
 public struct AccessibilitySnapshot: TestTool {
