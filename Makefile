@@ -8,11 +8,6 @@ all: proj format
 .PHONY: proj
 proj:
 	$(SWIFT_RUN) --package-path Tools xcodegen --spec Example/project.yml --project Example
-	make pod-install
-
-.PHONY: pod-install
-pod-install:
-	bundle exec pod install --project-directory=Example || bundle exec pod install --repo-update --project-directory=Example
 
 .PHONY: format
 format:

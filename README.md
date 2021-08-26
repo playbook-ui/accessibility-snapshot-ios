@@ -87,6 +87,16 @@ target 'YourPlaybook' do
 end
 ```
 
+
+### [Swift Package Manager](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
+
+Select Xcode menu `File > Swift Packages > Add Package Dependency...` and enter repository URL with GUI.
+
+```
+Repository: https://github.com/playbook-ui/accessibility-snapshot-ios.git
+```
+
+
 ---
 
 ## Development

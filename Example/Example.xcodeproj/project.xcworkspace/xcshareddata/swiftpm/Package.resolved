@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AccessibilitySnapshot",
+        "repositoryURL": "https://github.com/cashapp/AccessibilitySnapshot.git",
+        "state": {
+          "branch": null,
+          "revision": "fb797dda564408b7da23349b25d192339402286e",
+          "version": "0.4.1"
+        }
+      },
+      {
+        "package": "Playbook",
+        "repositoryURL": "https://github.com/playbook-ui/playbook-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "06a18477543aa29b950aef88555449e2e31d84af",
+          "version": "0.3.1"
+        }
+      },
+      {
+        "package": "SnapshotTesting",
+        "repositoryURL": "https://github.com/pointfreeco/swift-snapshot-testing.git",
+        "state": {
+          "branch": null,
+          "revision": "f8a9c997c3c1dab4e216a8ec9014e23144cbab37",
+          "version": "1.9.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

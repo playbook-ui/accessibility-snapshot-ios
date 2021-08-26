@@ -1,4 +1,5 @@
 import Playbook
+import SampleApp
 import SwiftUI
 
 public struct AllScenarios: ScenarioProvider {
