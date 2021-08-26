@@ -1,10 +1,10 @@
 PODS:
   - AccessibilitySnapshot/Core (0.4.1)
   - Playbook (0.2.1)
-  - PlaybookAccessibilitySnapshot (0.1.1):
+  - PlaybookAccessibilitySnapshot (0.2.0):
     - AccessibilitySnapshot/Core (~> 0.4.1)
-    - PlaybookSnapshot (~> 0.2.1)
-  - PlaybookSnapshot (0.2.1):
+    - PlaybookSnapshot (~> 0.3.0)
+  - PlaybookSnapshot (0.3.0):
     - Playbook (~> 0.2.0)
 
 DEPENDENCIES:
@@ -24,8 +24,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AccessibilitySnapshot: 7d696575ee0df4371dde653b3087aaa9cfe4c300
   Playbook: 7c69cf1ccb790f730cdc853753910cd3673fe1af
-  PlaybookAccessibilitySnapshot: e3755a0bbc7352204bf43661482a0674cdb29888
-  PlaybookSnapshot: 21815a687fd3fd872f8a1861e47632da63891c78
+  PlaybookAccessibilitySnapshot: 1019aba76274cb91dbe7bfa177f5dda67a3a9d0b
+  PlaybookSnapshot: 1f471621af3c700bb357d1346b22f468eee9d3a4
 
 PODFILE CHECKSUM: 36a2ab796517e070d29584ada311d6a66782f841
 
