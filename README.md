@@ -25,7 +25,6 @@
 
 ### AccessibilitySnapshot
 
-
 ```swift
 final class AccessibilitySnapshotTests: XCTestCase {
     func testTakeAccessibilitySnapshot() throws {
