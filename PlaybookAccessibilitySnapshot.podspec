@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target = '12.0'
     spec.ios.source_files = 'Sources/**/*.swift'
     spec.dependency 'PlaybookSnapshot', "~> 0.3.0"
-    spec.dependency 'AccessibilitySnapshot/Core', "~> 0.4.1"
+    spec.dependency 'AccessibilitySnapshot/Core', "~> 0.5.0"
 
     spec.pod_target_xcconfig = {
         'APPLICATION_EXTENSION_API_ONLY' => 'NO',

@@ -46,7 +46,9 @@ public struct AccessibilitySnapshot: TestTool {
                     activationPointDisplayMode: .always
                 )
 
-                accessibilityView.parseAccessibility(useMonochromeSnapshot: false)
+                // Ignoring the error thrown by the parse function. It will be handled correctly
+                // once `PlaybookSnapshot` supports `viewPreprocessor` parameter to throw an error.
+                try? accessibilityView.parseAccessibility(useMonochromeSnapshot: false)
                 accessibilityView.sizeToFit()
                 return accessibilityView
             }
