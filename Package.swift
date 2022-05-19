@@ -19,7 +19,7 @@ let package = Package(
         .package(
             name: "AccessibilitySnapshot",
             url: "https://github.com/cashapp/AccessibilitySnapshot.git",
-            .upToNextMinor(from: "0.4.1")
+            .upToNextMinor(from: "0.5.0")
         ),
     ],
     targets: [
