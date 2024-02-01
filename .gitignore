@@ -24,9 +24,6 @@ archive/
 ## npm
 node_modules
 
-## Carthage
-Carthage/Build
-
 ## SwiftPM
 .swiftpm
 .build
