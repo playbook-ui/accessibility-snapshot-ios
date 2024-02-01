@@ -1,34 +1,41 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "AccessibilitySnapshot",
-        "repositoryURL": "https://github.com/cashapp/AccessibilitySnapshot.git",
-        "state": {
-          "branch": null,
-          "revision": "68f9270211893bcbb8a9b1b9d02e71303de35e26",
-          "version": "0.5.0"
-        }
-      },
-      {
-        "package": "Playbook",
-        "repositoryURL": "https://github.com/playbook-ui/playbook-ios.git",
-        "state": {
-          "branch": null,
-          "revision": "06a18477543aa29b950aef88555449e2e31d84af",
-          "version": "0.3.1"
-        }
-      },
-      {
-        "package": "SnapshotTesting",
-        "repositoryURL": "https://github.com/pointfreeco/swift-snapshot-testing.git",
-        "state": {
-          "branch": null,
-          "revision": "f8a9c997c3c1dab4e216a8ec9014e23144cbab37",
-          "version": "1.9.0"
-        }
+  "pins" : [
+    {
+      "identity" : "accessibilitysnapshot",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cashapp/AccessibilitySnapshot.git",
+      "state" : {
+        "revision" : "482db2fd4251cce237d8106073a53ad5289ce739",
+        "version" : "0.6.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "ios-snapshot-test-case",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/uber/ios-snapshot-test-case.git",
+      "state" : {
+        "revision" : "7b10770333a961be6e5a41c9ce04b8c6d3990126",
+        "version" : "8.0.0"
+      }
+    },
+    {
+      "identity" : "playbook-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/playbook-ui/playbook-ios.git",
+      "state" : {
+        "revision" : "0e7c312abdb4f7afeaf24369bab114cf475f573c",
+        "version" : "0.3.5"
+      }
+    },
+    {
+      "identity" : "swift-snapshot-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-snapshot-testing.git",
+      "state" : {
+        "revision" : "f8a9c997c3c1dab4e216a8ec9014e23144cbab37",
+        "version" : "1.9.0"
+      }
+    }
+  ],
+  "version" : 2
 }

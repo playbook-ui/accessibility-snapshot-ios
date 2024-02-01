@@ -62,8 +62,8 @@ The generated snapshot images with accessibility information can be used for mor
 
 ## Requirements
 
-- Swift 5.3+
-- Xcode 12.2+
+- Swift 5.9+
+- Xcode 15.0+
 - iOS 13.0+
 
 ---
