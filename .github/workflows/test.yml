@@ -1,47 +1,49 @@
-name: GitHub Actions
+name: test
+
 on:
   pull_request:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_15.2.app
+
 jobs:
   validation:
     name: Validation
-    runs-on: macos-11
-    strategy:
-      matrix:
-        xcode_version:
-          - 12.5.1
-    env:
-      DEVELOPER_DIR: /Applications/Xcode_${{ matrix.xcode_version }}.app
+    runs-on: macos-13
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Get SwiftPM cache
         uses: actions/cache@v2
         with:
-          path: Tools/.build
-          key: ${{ runner.os }}-${{ matrix.xcode_version }}-1-spm-${{ hashFiles('Tools/Package.resolved') }}
-          restore-keys: ${{ runner.os }}-${{ matrix.xcode_version }}-1-spm-
+          path: .build
+          key: ${{ runner.os }}-0-spm-${{ hashFiles('Package.resolved') }}
+          restore-keys: ${{ runner.os }}-0-spm-
 
-      - name: Validation
-        if: matrix.xcode_version == '12.5.1'
+      - name: Validate format
         run: |
-          make all && [ -z "$(git status --porcelain)" ]
+          make format
+          if [ -n "$(git status --porcelain)" ]; then echo "Make sure that the code is formated by 'make format'."; exit 1; fi
           make lint
+        env:
+          SPM_FORCE_BUILD: 1
+
+      - name: Validate example project
+        run: |
+          make proj
+          if [ -n "$(git status --porcelain)" ]; then echo "Make sure that example project is formated by 'make proj'."; exit 1; fi
+        env:
+          SPM_FORCE_BUILD: 1
 
   test:
     name: Test on macOS
-    runs-on: macos-11
-    strategy:
-      matrix:
-        xcode_version:
-          - 12.4
-          - 12.5.1
-    env:
-      DEVELOPER_DIR: /Applications/Xcode_${{ matrix.xcode_version }}.app
+    runs-on: macos-13
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Show environments
         run: |
@@ -61,11 +63,9 @@ jobs:
         run: make npm
 
       - name: Generate snapshots
-        working-directory: Example
-        run: xcodebuild test -scheme SampleApp -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12 Pro' ENABLE_TESTABILITY=YES | xcpretty -c
+        run: set -o pipefail && xcodebuild test -project Example/Example.xcodeproj -scheme SampleApp -destination 'platform=iOS Simulator,name=iPhone 15 Pro' | xcpretty -c
 
       - name: Visual regression test
-        if: matrix.xcode_version == '12.5.1'
         run: npx percy upload Example/Snapshots
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
