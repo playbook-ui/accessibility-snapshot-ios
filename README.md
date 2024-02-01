@@ -9,6 +9,7 @@
 <a href="LICENSE"><img alt="Lincense" src="http://img.shields.io/badge/License-Apache%202.0-black.svg"/></a>
 <br>
 <a href="https://github.com/playbook-ui/accessibility-snapshot-ios/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/playbook-ui/accessibility-snapshot-ios.svg"/></a>
+<a href="https://swift.org/package-manager"><img alt="Swift Package Manager" src="https://img.shields.io/badge/SwiftPM-compatible-yellowgreen.svg"/></a>
 
 `PlaybookAccessibilitySnapshot` is an extension to [Playbook](https://github.com/playbook-ui/playbook-ios) that uses [AccessibilitySnapshot](https://github.com/cashapp/AccessibilitySnapshot) to produce snapshots with accessibility information such as activation points and labels.
 
@@ -63,7 +64,7 @@ The generated snapshot images with accessibility information can be used for mor
 
 - Swift 5.3+
 - Xcode 12.2+
-- iOS 12.0+
+- iOS 13.0+
 
 ---
 
