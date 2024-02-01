@@ -18,6 +18,13 @@ lint:
 npm:
 	npm i
 
+.PHONY: docs
+docs:
+	xcodebuild docbuild \
+	  -scheme PlaybookAccessibilitySnapshot \
+	  -destination generic/platform=iOS \
+	  OTHER_DOCC_FLAGS="--transform-for-static-hosting --hosting-base-path accessibility-snapshot-ios --output-path docs"
+
 .PHONY: fix-readme-links
 fix-readme-links:
 	sed -i '' -E '/.?http/!s#(<img src=")([^"]+)#\1$(GITHUB_RAW_CONTENT_PATH)\2#g' README.md

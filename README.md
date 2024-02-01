@@ -17,7 +17,7 @@
 
 ## Usage
 
-- [API Document](https://playbook-ui.github.io/accessibility-snapshot-ios)
+- [API Document](https://playbook-ui.github.io/accessibility-snapshot-ios/documentation/playbookaccessibilitysnapshot)
 - [Example App](https://github.com/playbook-ui/accessibility-snapshot-ios/tree/main/Example)
 
 ---
