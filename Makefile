@@ -17,19 +17,6 @@ format:
 lint:
 	$(SWIFT_RUN) --package-path Tools swift-format -r -m lint Sources Example/SampleAccessibilitySnapshot
 
-.PHONY: pod-lib-lint
-pod-lib-lint:
-	bundle exec pod lib lint --skip-tests PlaybookAccessibilitySnapshot.podspec
-
-.PHONY: pod-release
-pod-release:
-	bundle exec pod trunk push --verbose PlaybookAccessibilitySnapshot.podspec
-
-.PHONY: gem
-gem:
-	bundle config path vendor/bundle
-	bundle install --jobs 4 --retry 3
-
 .PHONY: npm
 npm:
 	npm i

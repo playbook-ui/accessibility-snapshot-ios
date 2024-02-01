@@ -17,14 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Get ruby gem cache
-        id: gem-cache
-        uses: actions/cache@v2
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-1-gem-${{ hashFiles('Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-1-gem-
-
       - name: Get SwiftPM cache
         uses: actions/cache@v2
         with:
@@ -32,16 +24,11 @@ jobs:
           key: ${{ runner.os }}-${{ matrix.xcode_version }}-1-spm-${{ hashFiles('Tools/Package.resolved') }}
           restore-keys: ${{ runner.os }}-${{ matrix.xcode_version }}-1-spm-
 
-      - name: Install ruby gems
-        if: steps.gem-cache.cache.outputs.cache-hit != 'true'
-        run: make gem
-
       - name: Validation
         if: matrix.xcode_version == '12.5.1'
         run: |
           make all && [ -z "$(git status --porcelain)" ]
           make lint
-          make pod-lib-lint
 
   test:
     name: Test on macOS
