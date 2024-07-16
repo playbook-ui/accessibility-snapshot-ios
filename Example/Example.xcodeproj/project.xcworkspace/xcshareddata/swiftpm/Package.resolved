@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/cashapp/AccessibilitySnapshot.git",
       "state" : {
-        "revision" : "482db2fd4251cce237d8106073a53ad5289ce739",
-        "version" : "0.6.0"
+        "revision" : "ef2cf6015ad00c791fe3ff60f836b1fcc50f970c",
+        "version" : "0.7.0"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/playbook-ui/playbook-ios.git",
       "state" : {
-        "revision" : "0e7c312abdb4f7afeaf24369bab114cf475f573c",
-        "version" : "0.3.5"
+        "revision" : "da86a1a533e7ab5b1203908dfbb33aa38b782421",
+        "version" : "0.4.1"
       }
     },
     {

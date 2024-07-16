@@ -15,11 +15,11 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/playbook-ui/playbook-ios.git",
-            .upToNextMinor(from: "0.3.5")
+            .upToNextMinor(from: "0.4.1")
         ),
         .package(
             url: "https://github.com/cashapp/AccessibilitySnapshot.git",
-            .upToNextMinor(from: "0.6.0")
+            .upToNextMinor(from: "0.7.0")
         ),
     ],
     targets: [
