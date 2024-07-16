@@ -12,10 +12,11 @@ import UIKit
 public final class RepresentableUIView: UIView {
     public var color: UIColor
 
-    public init(_ color: UIColor) {
+    public init(_ color: UIColor, accessibilityUserInputLabels: [String]) {
         self.color = color
         super.init(frame: .zero)
         self.isAccessibilityElement = true
+        self.accessibilityUserInputLabels = accessibilityUserInputLabels
         layer.backgroundColor = color.cgColor
         layer.cornerRadius = defaultCornerRadius
         layer.borderColor = UIColor.black.cgColor
@@ -29,7 +30,7 @@ public final class RepresentableUIView: UIView {
 
 public struct RepresentableView: UIViewRepresentable {
     public func makeUIView(context: UIViewRepresentableContext<RepresentableView>) -> RepresentableUIView {
-        return RepresentableUIView(.red)
+        return RepresentableUIView(.red, accessibilityUserInputLabels: ["Red", "Rectangular"])
     }
 
     public func updateUIView(_ nsView: RepresentableUIView, context: UIViewRepresentableContext<RepresentableView>) {
@@ -40,7 +41,7 @@ public struct RepresentableView: UIViewRepresentable {
 
 public final class RepresentableUIViewController: UIViewController {
     public override func loadView() {
-        self.view = RepresentableUIView(.blue)
+        self.view = RepresentableUIView(.blue, accessibilityUserInputLabels: ["Blue", "Rectangular"])
     }
 }
 
