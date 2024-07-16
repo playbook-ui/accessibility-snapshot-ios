@@ -43,7 +43,8 @@ public struct AccessibilitySnapshot: TestTool {
                 let accessibilityView = AccessibilitySnapshotView(
                     containedView: view.superview ?? view,
                     viewRenderingMode: .renderLayerInContext,
-                    activationPointDisplayMode: .always
+                    activationPointDisplayMode: .always,
+                    showUserInputLabels: true
                 )
 
                 // Ignoring the error thrown by the parse function. It will be handled correctly
