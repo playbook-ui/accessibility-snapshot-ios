@@ -16,6 +16,7 @@ public struct StandardControlExample: View {
             Button(action: {}) {
                 Text("Button with hint & identifier")
             }
+            .accessibilityRemoveTraits(.isButton)
             .accessibilityHint(Text("Accessibility hint for first button"))
             .accessibilityIdentifier("First Button")
 
@@ -25,6 +26,7 @@ public struct StandardControlExample: View {
                 Text("Toggle with hint")
             }
             .accessibilityHint(Text("Accessibility hint for toggle"))
+            .disabled(true)
 
             LargeSpacer()
 

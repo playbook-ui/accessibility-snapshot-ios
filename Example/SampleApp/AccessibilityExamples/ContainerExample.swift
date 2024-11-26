@@ -16,10 +16,17 @@ public struct ContainerExample: View {
             // Create a stack with multiple toggles and a label inside.
             VStack(alignment: .leading) {
                 Text("Grouping Container")
+                    .accessibilityAddTraits(.isHeader)
+                    .accessibilitySortPriority(0)
+
                 Toggle(isOn: $onState) { Text("Toggle 1") }
+                    .accessibilitySortPriority(2)
                 Toggle(isOn: $onState) { Text("Toggle 2") }
+                    .accessibilitySortPriority(1)
                 Toggle(isOn: $onState) { Text("Toggle 3") }
+                    .accessibilitySortPriority(3)
                 Toggle(isOn: $onState) { Text("Toggle 4") }
+                    .accessibilitySortPriority(4)
             }
             .padding()
             .background(Color.white)

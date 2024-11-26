@@ -36,6 +36,7 @@ public struct ImageExample: View {
     public var body: some View {
         VStack(alignment: .leading) {
             Text("Unlabeled Image")
+                .accessibilityHidden(true)
 
             // This image creates an accessibility element, but has no label.
             ExampleImageView(Image("dot_green"))
@@ -43,6 +44,7 @@ public struct ImageExample: View {
             LargeSpacer()
 
             Text("Labeled Images")
+                .accessibilityHidden(true)
 
             HStack {
                 // This image uses an explicit accessibility label via the API.
@@ -61,6 +63,7 @@ public struct ImageExample: View {
             LargeSpacer()
 
             Text("Decorative Image")
+                .accessibilityHidden(true)
 
             // This image is explicitly marked decorative, so it does not
             // create an accessibility element.

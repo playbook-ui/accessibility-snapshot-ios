@@ -17,6 +17,7 @@ public struct TextExample: View {
 
             Text("Relabeled Text")
                 .accessibilityLabel(Text("Accessibility Label"))
+                .accessibilityAddTraits(.isStaticText)
 
             LargeSpacer()
 
@@ -30,9 +31,9 @@ public struct TextExample: View {
                 Text("Stacked Multiple Line Text Line 1")
                 Text("This is on another line")
             }
-            .accessibilityElement(children: .combine)
+            .accessibilityElement(children: .contain)
 
-            Text("Simple Multiple Line Text\nThis is on another line")
+            Text("Simple Multiple Line Text\nThis is on second line\nThis is on third line")
                 .lineLimit(nil)
 
             LargeSpacer()

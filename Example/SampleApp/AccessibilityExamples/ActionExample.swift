@@ -51,33 +51,39 @@ public struct ActionExample: View {
 
     public var body: some View {
         VStack(alignment: .leading) {
-            Text("Element with default action")
-
-            AccessibilityElementView(color: defaultActionColor, text: Text("Default"))
-                .accessibilityLabel(Text("Element with default action"))
-                .accessibilityAddTraits(.isButton)
-                .accessibilityAction {
-                    print("Default action fired!")
-                    self.defaultActionFired = true
-                }
-
-            LargeSpacer()
-
-            Text("Element with custom actions")
-
-            AccessibilityElementView(color: customActionColor, text: Text("Custom"))
-                .accessibilityLabel(Text("Element with custom actions"))
-                .accessibilityAction(named: Text("Custom Action 1"), customAction1)
-                .accessibilityAction(named: Text("Custom Action 2"), customAction2)
+            VStack(alignment: .leading) {
+                Text("Element with default action").accessibilityHidden(true)
+                AccessibilityElementView(color: defaultActionColor, text: Text("Default"))
+            }
+            .accessibilityLabel(Text("Element with default action"))
+            .accessibilityAddTraits(.isButton)
+            .accessibilityAction {
+                print("Default action fired!")
+                self.defaultActionFired = true
+            }
+            .accessibilityElement(children: .combine)
 
             LargeSpacer()
 
-            Text("Custom adjustment action element")
+            VStack(alignment: .leading) {
+                Text("Element with custom actions").accessibilityHidden(true)
+                AccessibilityElementView(color: customActionColor, text: Text("Custom"))
+            }
+            .accessibilityLabel(Text("Element with custom actions"))
+            .accessibilityAction(named: Text("Custom Action 1"), customAction1)
+            .accessibilityAction(named: Text("Custom Action 2"), customAction2)
+            .accessibilityElement(children: .combine)
 
-            AccessibilityElementView(color: .green, text: Text("Adjustable: \(incrementIndex)"))
-                .accessibilityLabel(Text("Custom increment element"))
-                .accessibilityValue(Text(verbatim: "\(incrementIndex)"))
-                .accessibilityAdjustableAction(adjustAction)
+            LargeSpacer()
+
+            VStack(alignment: .leading) {
+                Text("Custom adjustment action element").accessibilityHidden(true)
+                AccessibilityElementView(color: .green, text: Text("Adjustable: \(incrementIndex)"))
+            }
+            .accessibilityLabel(Text("Custom adjustment action element"))
+            .accessibilityValue(Text(verbatim: "\(incrementIndex)"))
+            .accessibilityAdjustableAction(adjustAction)
+            .accessibilityElement(children: .combine)
         }
     }
 
